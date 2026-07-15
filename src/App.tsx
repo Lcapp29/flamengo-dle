@@ -459,14 +459,14 @@ export default function App() {
         {guesses.length > 0 ? (
           <div className="w-full select-none overflow-x-auto">
             {/* Table Header Grid */}
-            <div className="grid grid-cols-7 gap-1.5 md:gap-3 w-full max-w-5xl mx-auto px-1 pb-2 border-b border-white/5 text-center font-bold text-[8px] md:text-[10px] text-white/40 uppercase tracking-widest">
-              <div>Jogador</div>
-              <div>Posição</div>
-              <div>Nascimento</div>
-              <div>Estreia</div>
-              <div>Região</div>
-              <div>Partidas</div>
-              <div>Gols</div>
+            <div className="flex gap-1.5 md:gap-3 w-max md:w-full min-w-full max-w-5xl mx-auto px-1 pb-2 border-b border-white/5 text-center font-bold text-[8px] md:text-[10px] text-white/40 uppercase tracking-widest relative">
+              <div className="w-[76px] md:w-full md:flex-1 shrink-0 sticky left-0 z-20 bg-[#050505] before:absolute before:inset-y-0 before:-right-1.5 md:before:hidden before:w-1.5 before:bg-[#050505]">Jogador</div>
+              <div className="w-[76px] md:w-full md:flex-1 shrink-0">Posição</div>
+              <div className="w-[76px] md:w-full md:flex-1 shrink-0">Nascimento</div>
+              <div className="w-[76px] md:w-full md:flex-1 shrink-0">Estreia</div>
+              <div className="w-[76px] md:w-full md:flex-1 shrink-0">Região</div>
+              <div className="w-[76px] md:w-full md:flex-1 shrink-0">Partidas</div>
+              <div className="w-[76px] md:w-full md:flex-1 shrink-0">Gols</div>
             </div>
 
             {/* Guess Rows (Reversed to show newest guess on top) */}

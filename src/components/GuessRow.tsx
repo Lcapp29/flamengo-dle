@@ -50,8 +50,8 @@ export const GuessRow: React.FC<GuessRowProps> = ({ guess, secret }) => {
       label: 'Jogador',
       status: 'neutral',
       content: (
-        <div className="flex flex-col items-center justify-center h-full p-1 text-center">
-          <div className="relative w-9 h-9 md:w-11 md:h-11 rounded-full overflow-hidden border-2 border-[#d30000] bg-[#1a1a1a] mb-1">
+        <div className="flex flex-col items-center justify-center h-full p-0.5 text-center">
+          <div className="relative w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-[#d30000] bg-[#1a1a1a] mb-0.5">
             <img
               src={guess.foto}
               alt={guess.nome}
@@ -59,7 +59,7 @@ export const GuessRow: React.FC<GuessRowProps> = ({ guess, secret }) => {
               referrerPolicy="no-referrer"
             />
           </div>
-          <span className="text-[9px] md:text-xs font-bold leading-tight line-clamp-1 text-zinc-100 max-w-[85px] uppercase font-sans">
+          <span className="text-[8px] md:text-xs font-bold leading-tight line-clamp-2 text-zinc-100 w-full uppercase font-sans break-words px-0.5">
             {guess.nome.split(' (')[0]}
           </span>
         </div>
@@ -209,14 +209,17 @@ export const GuessRow: React.FC<GuessRowProps> = ({ guess, secret }) => {
   };
 
   return (
-    <div className="grid grid-cols-7 gap-1.5 md:gap-3 w-full max-w-5xl mx-auto my-2 px-1">
+    <div className="flex gap-1.5 md:gap-3 w-max md:w-full min-w-full max-w-5xl mx-auto my-2 px-1 relative">
       {cells.map((cell, index) => (
         <div
           key={index}
-          className="perspective-1000 w-full h-16 md:h-[90px]"
+          className={`perspective-1000 w-[76px] md:w-full md:flex-1 shrink-0 h-[80px] md:h-[90px] ${
+            index === 0 ? 'sticky left-0 z-10 before:absolute before:inset-y-0 before:-right-1.5 md:before:hidden before:w-1.5 before:bg-[#050505]' : ''
+          }`}
+          style={{ left: index === 0 ? 0 : 'auto' }}
         >
           <div
-            className="w-full h-full relative transform-style-3d cell-flip border border-white/10 rounded-lg overflow-hidden shadow-lg"
+            className="w-full h-full relative transform-style-3d cell-flip border border-white/10 rounded-lg overflow-hidden shadow-[4px_0_12px_rgba(0,0,0,0.3)]"
             style={{
               animationDelay: `${index * 150}ms`,
               transformStyle: 'preserve-3d',
