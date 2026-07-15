@@ -1,15 +1,17 @@
 import React from 'react';
-import { Player } from '../types';
+import { Player, GuessType } from '../types';
 import { comparePlayers, getRegion } from '../utils/gameLogic';
-import { Flame, ArrowUp, ArrowDown } from 'lucide-react';
+import { Flame, ArrowUp, ArrowDown, Lightbulb } from 'lucide-react';
 
 interface GuessRowProps {
-  guess: Player;
+  guess: GuessType;
   secret: Player;
 }
 
 export const GuessRow: React.FC<GuessRowProps> = ({ guess, secret }) => {
-  const diffs = comparePlayers(guess, secret);
+  const isHint = 'isHint' in guess && guess.isHint;
+  const playerGuess = !isHint ? (guess as Player) : secret;
+  const diffs = !isHint ? comparePlayers(playerGuess, secret) : null;
 
   const getTextStyle = (status: string) => {
     if (status === 'close') {
@@ -44,23 +46,39 @@ export const GuessRow: React.FC<GuessRowProps> = ({ guess, secret }) => {
     };
   };
 
+  const renderHintEmpty = (label: string) => (
+    <div className="flex flex-col items-center justify-center h-full p-1 text-center">
+      <span className="text-[8px] md:text-[10px] uppercase tracking-wider block mb-0.5 text-zinc-500 font-medium">{label}</span>
+      <span className="text-xl md:text-2xl font-bold text-zinc-700">?</span>
+    </div>
+  );
+
   const cells = [
-    // 1. Imagem e Nome (Sem cor de validação)
+    // 1. Imagem e Nome
     {
       label: 'Jogador',
       status: 'neutral',
-      content: (
+      content: isHint ? (
+        <div className="flex flex-col items-center justify-center h-full p-0.5 text-center">
+          <div className="relative w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-[#eab308] bg-[#1a1a1a] mb-0.5 flex items-center justify-center">
+            <Lightbulb className="w-4 h-4 md:w-5 md:h-5 text-[#eab308]" />
+          </div>
+          <span className="text-[8px] md:text-xs font-bold leading-tight line-clamp-2 text-[#eab308] w-full uppercase font-sans break-words px-0.5">
+            Dica
+          </span>
+        </div>
+      ) : (
         <div className="flex flex-col items-center justify-center h-full p-0.5 text-center">
           <div className="relative w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-[#d30000] bg-[#1a1a1a] mb-0.5">
             <img
-              src={guess.foto}
-              alt={guess.nome}
+              src={playerGuess.foto}
+              alt={playerGuess.nome}
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
           </div>
           <span className="text-[8px] md:text-xs font-bold leading-tight line-clamp-2 text-zinc-100 w-full uppercase font-sans break-words px-0.5">
-            {guess.nome.split(' (')[0]}
+            {playerGuess.nome.split(' (')[0]}
           </span>
         </div>
       ),
@@ -69,13 +87,14 @@ export const GuessRow: React.FC<GuessRowProps> = ({ guess, secret }) => {
     // 2. Posição
     {
       label: 'Posição',
-      status: diffs.position.status,
-      content: (() => {
-        const styles = getTextStyle(diffs.position.status);
+      status: isHint ? (guess.column === 'posicao' ? 'correct' : 'neutral') : diffs!.position.status,
+      content: isHint && guess.column !== 'posicao' ? renderHintEmpty('Posição') : (() => {
+        const status = isHint ? 'correct' : diffs!.position.status;
+        const styles = getTextStyle(status);
         return (
           <div className="flex flex-col items-center justify-center h-full p-1 text-center">
             <span className={`text-[8px] md:text-[10px] uppercase tracking-wider block mb-0.5 ${styles.label}`}>Posição</span>
-            <span className={`text-[10px] md:text-xs uppercase ${styles.value}`}>{guess.posicao}</span>
+            <span className={`text-[10px] md:text-xs uppercase ${styles.value}`}>{playerGuess.posicao}</span>
           </div>
         );
       })(),
@@ -84,17 +103,18 @@ export const GuessRow: React.FC<GuessRowProps> = ({ guess, secret }) => {
     // 3. Ano de Nascimento
     {
       label: 'Nascimento',
-      status: diffs.anoNascimento.status,
-      content: (() => {
-        const styles = getTextStyle(diffs.anoNascimento.status);
+      status: isHint ? (guess.column === 'anoNascimento' ? 'correct' : 'neutral') : diffs!.anoNascimento.status,
+      content: isHint && guess.column !== 'anoNascimento' ? renderHintEmpty('Nascimento') : (() => {
+        const status = isHint ? 'correct' : diffs!.anoNascimento.status;
+        const styles = getTextStyle(status);
         return (
           <div className="flex flex-col items-center justify-center h-full p-1 relative text-center">
             <span className={`text-[8px] md:text-[10px] uppercase tracking-wider block mb-0.5 ${styles.label}`}>Nascimento</span>
-            <span className={`text-xs md:text-sm font-mono ${styles.value}`}>{guess.anoNascimento}</span>
-            <span className={`text-[8px] md:text-[9px] ${styles.sub}`}>({new Date().getFullYear() - guess.anoNascimento} anos)</span>
-            {diffs.anoNascimento.status !== 'correct' && (
+            <span className={`text-xs md:text-sm font-mono ${styles.value}`}>{playerGuess.anoNascimento}</span>
+            <span className={`text-[8px] md:text-[9px] ${styles.sub}`}>({new Date().getFullYear() - playerGuess.anoNascimento} anos)</span>
+            {!isHint && diffs!.anoNascimento.status !== 'correct' && (
               <div className="absolute right-1 top-1">
-                {diffs.anoNascimento.direction === 'up' ? (
+                {diffs!.anoNascimento.direction === 'up' ? (
                   <ArrowUp className={`w-3 h-3 md:w-3.5 md:h-3.5 ${styles.arrow} animate-bounce`} />
                 ) : (
                   <ArrowDown className={`w-3 h-3 md:w-3.5 md:h-3.5 ${styles.arrow} animate-bounce`} />
@@ -104,21 +124,22 @@ export const GuessRow: React.FC<GuessRowProps> = ({ guess, secret }) => {
           </div>
         );
       })(),
-      direction: diffs.anoNascimento.direction,
+      direction: isHint ? 'equal' : diffs!.anoNascimento.direction,
     },
     // 4. Ano de Estreia
     {
       label: 'Estreia',
-      status: diffs.anoEstreia.status,
-      content: (() => {
-        const styles = getTextStyle(diffs.anoEstreia.status);
+      status: isHint ? (guess.column === 'anoEstreia' ? 'correct' : 'neutral') : diffs!.anoEstreia.status,
+      content: isHint && guess.column !== 'anoEstreia' ? renderHintEmpty('Estreia') : (() => {
+        const status = isHint ? 'correct' : diffs!.anoEstreia.status;
+        const styles = getTextStyle(status);
         return (
           <div className="flex flex-col items-center justify-center h-full p-1 relative text-center">
             <span className={`text-[8px] md:text-[10px] uppercase tracking-wider block mb-0.5 ${styles.label}`}>Estreia</span>
-            <span className={`text-xs md:text-sm font-mono ${styles.value}`}>{guess.anoEstreia}</span>
-            {diffs.anoEstreia.status !== 'correct' && (
+            <span className={`text-xs md:text-sm font-mono ${styles.value}`}>{playerGuess.anoEstreia}</span>
+            {!isHint && diffs!.anoEstreia.status !== 'correct' && (
               <div className="absolute right-1 top-1">
-                {diffs.anoEstreia.direction === 'up' ? (
+                {diffs!.anoEstreia.direction === 'up' ? (
                   <ArrowUp className={`w-3 h-3 md:w-3.5 md:h-3.5 ${styles.arrow} animate-bounce`} />
                 ) : (
                   <ArrowDown className={`w-3 h-3 md:w-3.5 md:h-3.5 ${styles.arrow} animate-bounce`} />
@@ -128,18 +149,19 @@ export const GuessRow: React.FC<GuessRowProps> = ({ guess, secret }) => {
           </div>
         );
       })(),
-      direction: diffs.anoEstreia.direction,
+      direction: isHint ? 'equal' : diffs!.anoEstreia.direction,
     },
     // 5. Local de Nascimento
     {
       label: 'Região',
-      status: diffs.region.status,
-      content: (() => {
-        const styles = getTextStyle(diffs.region.status);
+      status: isHint ? (guess.column === 'localNascimento' ? 'correct' : 'neutral') : diffs!.region.status,
+      content: isHint && guess.column !== 'localNascimento' ? renderHintEmpty('Região') : (() => {
+        const status = isHint ? 'correct' : diffs!.region.status;
+        const styles = getTextStyle(status);
         return (
           <div className="flex flex-col items-center justify-center h-full p-1 text-center">
             <span className={`text-[8px] md:text-[10px] uppercase tracking-wider block mb-0.5 ${styles.label}`}>Região</span>
-            <span className={`text-xs md:text-sm font-bold uppercase ${styles.value}`}>{getRegion(guess.localNascimento)}</span>
+            <span className={`text-xs md:text-sm font-bold uppercase ${styles.value}`}>{getRegion(playerGuess.localNascimento)}</span>
           </div>
         );
       })(),
@@ -148,16 +170,17 @@ export const GuessRow: React.FC<GuessRowProps> = ({ guess, secret }) => {
     // 6. Partidas
     {
       label: 'Partidas',
-      status: diffs.partidas.status,
-      content: (() => {
-        const styles = getTextStyle(diffs.partidas.status);
+      status: isHint ? (guess.column === 'partidas' ? 'correct' : 'neutral') : diffs!.partidas.status,
+      content: isHint && guess.column !== 'partidas' ? renderHintEmpty('Partidas') : (() => {
+        const status = isHint ? 'correct' : diffs!.partidas.status;
+        const styles = getTextStyle(status);
         return (
           <div className="flex flex-col items-center justify-center h-full p-1 relative text-center">
             <span className={`text-[8px] md:text-[10px] uppercase tracking-wider block mb-0.5 ${styles.label}`}>Partidas</span>
-            <span className={`text-xs md:text-sm font-mono ${styles.value}`}>{guess.partidas}</span>
-            {diffs.partidas.status !== 'correct' && (
+            <span className={`text-xs md:text-sm font-mono ${styles.value}`}>{playerGuess.partidas}</span>
+            {!isHint && diffs!.partidas.status !== 'correct' && (
               <div className="absolute right-1 top-1">
-                {diffs.partidas.direction === 'up' ? (
+                {diffs!.partidas.direction === 'up' ? (
                   <ArrowUp className={`w-3 h-3 md:w-3.5 md:h-3.5 ${styles.arrow} animate-bounce`} />
                 ) : (
                   <ArrowDown className={`w-3 h-3 md:w-3.5 md:h-3.5 ${styles.arrow} animate-bounce`} />
@@ -167,21 +190,22 @@ export const GuessRow: React.FC<GuessRowProps> = ({ guess, secret }) => {
           </div>
         );
       })(),
-      direction: diffs.partidas.direction,
+      direction: isHint ? 'equal' : diffs!.partidas.direction,
     },
     // 7. Gols
     {
       label: 'Gols',
-      status: diffs.gols.status,
-      content: (() => {
-        const styles = getTextStyle(diffs.gols.status);
+      status: isHint ? (guess.column === 'gols' ? 'correct' : 'neutral') : diffs!.gols.status,
+      content: isHint && guess.column !== 'gols' ? renderHintEmpty('Gols') : (() => {
+        const status = isHint ? 'correct' : diffs!.gols.status;
+        const styles = getTextStyle(status);
         return (
           <div className="flex flex-col items-center justify-center h-full p-1 relative text-center">
             <span className={`text-[8px] md:text-[10px] uppercase tracking-wider block mb-0.5 ${styles.label}`}>Gols</span>
-            <span className={`text-xs md:text-sm font-mono ${styles.value}`}>{guess.gols}</span>
-            {diffs.gols.status !== 'correct' && (
+            <span className={`text-xs md:text-sm font-mono ${styles.value}`}>{playerGuess.gols}</span>
+            {!isHint && diffs!.gols.status !== 'correct' && (
               <div className="absolute right-1 top-1">
-                {diffs.gols.direction === 'up' ? (
+                {diffs!.gols.direction === 'up' ? (
                   <ArrowUp className={`w-3 h-3 md:w-3.5 md:h-3.5 ${styles.arrow} animate-bounce`} />
                 ) : (
                   <ArrowDown className={`w-3 h-3 md:w-3.5 md:h-3.5 ${styles.arrow} animate-bounce`} />
@@ -191,7 +215,7 @@ export const GuessRow: React.FC<GuessRowProps> = ({ guess, secret }) => {
           </div>
         );
       })(),
-      direction: diffs.gols.direction,
+      direction: isHint ? 'equal' : diffs!.gols.direction,
     },
   ];
 

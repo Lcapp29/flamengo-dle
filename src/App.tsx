@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { Player, AutocompletePlayer, GameState, Stats } from './types';
-import { getDailyPlayer } from './utils/gameLogic';
+import { Player, AutocompletePlayer, GameState, Stats, GuessType, Hint } from './types';
+import { getDailyPlayer, getRegion } from './utils/gameLogic';
 import { GuessRow } from './components/GuessRow';
 import { StatsModal } from './components/StatsModal';
 import {
@@ -11,14 +11,15 @@ import {
   X,
   Info,
   Calendar,
-  AlertCircle
+  AlertCircle,
+  Lightbulb
 } from 'lucide-react';
 
 export default function App() {
   const [autocompletePlayers, setAutocompletePlayers] = useState<AutocompletePlayer[]>([]);
   const [fullPlayers, setFullPlayers] = useState<Player[]>([]);
   const [secretPlayer, setSecretPlayer] = useState<Player | null>(null);
-  const [guesses, setGuesses] = useState<Player[]>([]);
+  const [guesses, setGuesses] = useState<GuessType[]>([]);
   const [won, setWon] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
@@ -115,8 +116,14 @@ export default function App() {
           const parsedState: GameState = JSON.parse(savedState);
           // Restore guesses objects from IDs
           const restoredGuesses = parsedState.guesses
-            .map((id) => fullData.find((p) => p.id === id))
-            .filter((p): p is Player => !!p);
+            .map((id) => {
+              if (id.startsWith('hint:')) {
+                const column = id.split('hint:')[1] as keyof Player;
+                return { isHint: true as const, column };
+              }
+              return fullData.find((p) => p.id === id);
+            })
+            .filter((g): g is GuessType => !!g);
 
           setGuesses(restoredGuesses);
           setWon(parsedState.won);
@@ -157,7 +164,7 @@ export default function App() {
 
     return autocompletePlayers
       .filter((player) => {
-        const isAlreadyGuessed = guesses.some((g) => g.id === player.id);
+        const isAlreadyGuessed = guesses.some((g) => !('isHint' in g) && g.id === player.id);
         if (isAlreadyGuessed) return false;
 
         const normalName = player.nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -178,7 +185,7 @@ export default function App() {
     // Save state to the selected date's localStorage
     const newState: GameState = {
       date: gameDateStr,
-      guesses: newGuesses.map((g) => g.id),
+      guesses: newGuesses.map((g) => ('isHint' in g ? `hint:${g.column}` : g.id)),
       won: isCorrect,
     };
     localStorage.setItem(keys.stateKey, JSON.stringify(newState));
@@ -194,6 +201,52 @@ export default function App() {
         setShowStatsModal(true);
       }, 1500);
     }
+  };
+
+  // Hint logic calculation
+  const regularGuessesCount = guesses.filter(g => !('isHint' in g)).length;
+  const hintsCount = guesses.filter(g => 'isHint' in g).length;
+  const availableHints = Math.floor(regularGuessesCount / 5) - hintsCount;
+  const nextHintProgress = regularGuessesCount % 5;
+
+  const columnsToCheck: (keyof Player)[] = ['posicao', 'anoNascimento', 'anoEstreia', 'localNascimento', 'partidas', 'gols'];
+
+  const unrevealedColumns = useMemo(() => {
+    if (!secretPlayer) return [];
+    return columnsToCheck.filter(col => {
+      // Check if any guess (regular or hint) already revealed this column
+      return !guesses.some(g => {
+        if ('isHint' in g) {
+          return g.column === col;
+        } else {
+          const playerGuess = g as Player;
+          if (col === 'localNascimento') {
+            return getRegion(playerGuess.localNascimento) === getRegion(secretPlayer.localNascimento);
+          }
+          return playerGuess[col] === secretPlayer[col];
+        }
+      });
+    });
+  }, [guesses, secretPlayer]);
+
+  const handleUseHint = () => {
+    if (availableHints <= 0 || unrevealedColumns.length === 0 || won) return;
+
+    // Pick a random unrevealed column
+    const randomCol = unrevealedColumns[Math.floor(Math.random() * unrevealedColumns.length)];
+    
+    const newHint = { isHint: true as const, column: randomCol };
+    const newGuesses = [...guesses, newHint];
+    
+    setGuesses(newGuesses);
+
+    // Save state to the selected date's localStorage
+    const newState: GameState = {
+      date: gameDateStr,
+      guesses: newGuesses.map((g) => ('isHint' in g ? `hint:${g.column}` : g.id)),
+      won: won,
+    };
+    localStorage.setItem(keys.stateKey, JSON.stringify(newState));
   };
 
   const updateStatsOnWin = (): Stats => {
@@ -380,9 +433,33 @@ export default function App() {
             className="w-full max-w-xl relative mb-10 z-30"
           >
             <div className="flex flex-col gap-1.5">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-[#d30000] ml-1">
-                Faça o seu palpite
-              </label>
+              <div className="flex items-center justify-between ml-1">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-[#d30000]">
+                  Faça o seu palpite
+                </label>
+                
+                <button
+                  onClick={handleUseHint}
+                  disabled={availableHints <= 0 || unrevealedColumns.length === 0 || won}
+                  className={`text-[10px] md:text-xs font-bold px-2.5 py-1 rounded-md flex items-center gap-1.5 transition-all ${
+                    (unrevealedColumns.length === 0 || won)
+                      ? 'bg-white/5 text-zinc-600 border border-white/5 cursor-not-allowed'
+                      : availableHints > 0
+                        ? 'bg-[#eab308]/20 text-[#eab308] border border-[#eab308]/30 hover:bg-[#eab308]/30 cursor-pointer shadow-[0_0_10px_rgba(234,179,8,0.2)]'
+                        : 'bg-white/5 text-zinc-500 border border-white/5 cursor-not-allowed'
+                  }`}
+                  title={(unrevealedColumns.length === 0 || won) ? "Dicas esgotadas" : availableHints > 0 ? "Usar uma dica para revelar uma coluna" : "Faça mais palpites para liberar a próxima dica"}
+                >
+                  <Lightbulb className={`w-3.5 h-3.5 ${availableHints > 0 && !(unrevealedColumns.length === 0 || won) ? 'animate-pulse' : ''}`} />
+                  {(unrevealedColumns.length === 0 || won) ? (
+                    <span>ESGOTADAS</span>
+                  ) : availableHints > 0 ? (
+                    <span>USAR DICA {availableHints > 1 ? `(${availableHints})` : ''}</span>
+                  ) : (
+                    <span>{nextHintProgress}/5</span>
+                  )}
+                </button>
+              </div>
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-500" />
                 <input
@@ -476,13 +553,16 @@ export default function App() {
 
             {/* Guess Rows (Reversed to show newest guess on top) */}
             <div className="flex flex-col">
-              {[...guesses].reverse().map((guess) => (
-                <GuessRow
-                  key={guess.id}
-                  guess={guess}
-                  secret={secretPlayer!}
-                />
-              ))}
+              {[...guesses].reverse().map((guess, idx) => {
+                const originalIndex = guesses.length - 1 - idx;
+                return (
+                  <GuessRow
+                    key={'isHint' in guess ? `hint-${guess.column}-${originalIndex}` : guess.id}
+                    guess={guess}
+                    secret={secretPlayer!}
+                  />
+                );
+              })}
             </div>
           </div>
         ) : (

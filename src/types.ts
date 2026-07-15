@@ -16,9 +16,16 @@ export interface AutocompletePlayer {
   foto: string;
 }
 
+export interface Hint {
+  isHint: true;
+  column: keyof Player;
+}
+
+export type GuessType = Player | Hint;
+
 export interface GameState {
   date: string;
-  guesses: string[]; // List of player IDs already guessed
+  guesses: string[]; // List of player IDs or 'hint:columnName'
   won: boolean;
 }
 
