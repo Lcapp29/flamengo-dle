@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { getSupabase } from './lib/supabaseClient';
 
+
 export default function App() {
   const [autocompletePlayers, setAutocompletePlayers] = useState<AutocompletePlayer[]>([]);
   const [fullPlayers, setFullPlayers] = useState<Player[]>([]);
