@@ -279,7 +279,7 @@ export default function App() {
       {/* Navigation Header */}
       <header className="flex items-center justify-between px-6 md:px-10 py-5 border-b border-white/10 bg-[#0a0a0a]/90 backdrop-blur-md sticky top-0 z-40">
         <div className="flex items-center gap-4">
-          <img src="./assets/logo.jpg" alt="Logo Flamengodle" className="h-10 w-auto object-contain" />
+          <img src="./assets/logo.png" alt="Logo Flamengodle" className="h-10 w-auto object-contain" />
           <div>
             <h1 className="text-xl md:text-2xl font-black tracking-tighter uppercase italic">
               Flamengo<span className="text-[#d30000]">dle</span>
