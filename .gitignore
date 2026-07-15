@@ -7,6 +7,7 @@ coverage/
 *.log
 .env*
 !.env.example
+.env
 
 # Pastas de trabalho 
 codigos/

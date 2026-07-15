@@ -14,6 +14,7 @@ import {
   AlertCircle,
   Lightbulb
 } from 'lucide-react';
+import { getSupabase } from './lib/supabaseClient';
 
 export default function App() {
   const [autocompletePlayers, setAutocompletePlayers] = useState<AutocompletePlayer[]>([]);
@@ -96,9 +97,9 @@ export default function App() {
         if (!res.ok) throw new Error('Failed to load jogadores_autocomplete.json');
         return res.json();
       }),
-      fetch('./database_flamengodle.json').then((res) => {
-        if (!res.ok) throw new Error('Failed to load database_flamengodle.json');
-        return res.json();
+      getSupabase().from('jogadores').select('*').then((res) => {
+        if (res.error) throw new Error(res.error.message);
+        return res.data;
       })
     ])
       .then(([autocompleteData, fullData]: [AutocompletePlayer[], Player[]]) => {
