@@ -1,0 +1,6 @@
+{
+  "name": "Flamengodle",
+  "description": "Jogo de adivinhar o jogador do Flamengo com base em estatísticas, idade, estreia e posição.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

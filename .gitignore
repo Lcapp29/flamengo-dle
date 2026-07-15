@@ -1,0 +1,14 @@
+# Pastas do React/Vite (Não mexer)
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Pastas de trabalho 
+codigos/
+dados_brutos/
+venv/
