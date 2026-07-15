@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { Player, GameState, Stats } from './types';
+import { Player, AutocompletePlayer, GameState, Stats } from './types';
 import { getDailyPlayer } from './utils/gameLogic';
 import { GuessRow } from './components/GuessRow';
 import { StatsModal } from './components/StatsModal';
@@ -15,7 +15,8 @@ import {
 } from 'lucide-react';
 
 export default function App() {
-  const [players, setPlayers] = useState<Player[]>([]);
+  const [autocompletePlayers, setAutocompletePlayers] = useState<AutocompletePlayer[]>([]);
+  const [fullPlayers, setFullPlayers] = useState<Player[]>([]);
   const [secretPlayer, setSecretPlayer] = useState<Player | null>(null);
   const [guesses, setGuesses] = useState<Player[]>([]);
   const [won, setWon] = useState(false);
@@ -89,18 +90,23 @@ export default function App() {
     setGuesses([]);
     setWon(false);
 
-    fetch('./database_flamengodle.json')
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error('Failed to load database_flamengodle.json');
-        }
+    Promise.all([
+      fetch('./jogadores_autocomplete.json').then((res) => {
+        if (!res.ok) throw new Error('Failed to load jogadores_autocomplete.json');
+        return res.json();
+      }),
+      fetch('./database_flamengodle.json').then((res) => {
+        if (!res.ok) throw new Error('Failed to load database_flamengodle.json');
         return res.json();
       })
-      .then((data: Player[]) => {
-        setPlayers(data);
+    ])
+      .then(([autocompleteData, fullData]: [AutocompletePlayer[], Player[]]) => {
+        setAutocompletePlayers(autocompleteData);
+        setFullPlayers(fullData);
 
         // Select the daily secret player deterministically based on selected date
-        const secret = getDailyPlayer(data, gameDateStr);
+        // Future Supabase: This would be verified via the backend
+        const secret = getDailyPlayer(fullData, gameDateStr);
         setSecretPlayer(secret);
 
         // Load that day's progress from LocalStorage
@@ -109,7 +115,7 @@ export default function App() {
           const parsedState: GameState = JSON.parse(savedState);
           // Restore guesses objects from IDs
           const restoredGuesses = parsedState.guesses
-            .map((id) => data.find((p) => p.id === id))
+            .map((id) => fullData.find((p) => p.id === id))
             .filter((p): p is Player => !!p);
 
           setGuesses(restoredGuesses);
@@ -123,7 +129,7 @@ export default function App() {
         }
       })
       .catch((err) => {
-        console.error('Error loading players:', err);
+        console.error('Error loading data:', err);
       });
 
     // Load overall statistics
@@ -149,7 +155,7 @@ export default function App() {
     if (!inputValue.trim()) return [];
     const search = inputValue.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
-    return players
+    return autocompletePlayers
       .filter((player) => {
         const isAlreadyGuessed = guesses.some((g) => g.id === player.id);
         if (isAlreadyGuessed) return false;
@@ -158,7 +164,7 @@ export default function App() {
         return normalName.includes(search);
       })
       .slice(0, 8); // Limit autocomplete options to 8 to keep it clean
-  }, [players, guesses, inputValue]);
+  }, [autocompletePlayers, guesses, inputValue]);
 
   // Handle a new guess submission
   const handleGuess = (player: Player) => {
@@ -252,8 +258,12 @@ export default function App() {
     }
   };
 
-  const handleSelectPlayer = (player: Player) => {
-    handleGuess(player);
+  const handleSelectPlayer = (autoPlayer: AutocompletePlayer) => {
+    // Find the full player data from our "remote" database (simulated with fullPlayers)
+    const fullPlayer = fullPlayers.find(p => p.id === autoPlayer.id);
+    if (!fullPlayer) return;
+
+    handleGuess(fullPlayer);
     setInputValue('');
     setShowDropdown(false);
     setActiveOptionIndex(0);
@@ -269,7 +279,7 @@ export default function App() {
       {/* Navigation Header */}
       <header className="flex items-center justify-between px-6 md:px-10 py-5 border-b border-white/10 bg-[#0a0a0a]/90 backdrop-blur-md sticky top-0 z-40">
         <div className="flex items-center gap-4">
-          <img src="./assets/logo.png" alt="Logo Flamengodle" className="h-10 w-auto object-contain" />
+          <img src="./assets/logo.jpg" alt="Logo Flamengodle" className="h-10 w-auto object-contain" />
           <div>
             <h1 className="text-xl md:text-2xl font-black tracking-tighter uppercase italic">
               Flamengo<span className="text-[#d30000]">dle</span>
@@ -428,11 +438,6 @@ export default function App() {
                         {player.nome}
                       </span>
                     </div>
-                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded uppercase ${
-                      index === activeOptionIndex ? 'bg-black/30 text-white' : 'bg-black/50 text-zinc-400'
-                    }`}>
-                      {player.posicao}
-                    </span>
                   </button>
                 ))}
               </div>

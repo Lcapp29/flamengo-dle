@@ -10,6 +10,12 @@ export interface Player {
   foto: string;
 }
 
+export interface AutocompletePlayer {
+  id: string;
+  nome: string;
+  foto: string;
+}
+
 export interface GameState {
   date: string;
   guesses: string[]; // List of player IDs already guessed

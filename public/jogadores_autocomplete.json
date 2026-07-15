@@ -1,0 +1,1727 @@
+[
+  {
+    "id": "adrianinho",
+    "nome": "Adrianinho",
+    "foto": "./imagens_jogadores/adrianinho.jpg"
+  },
+  {
+    "id": "adriano",
+    "nome": "Adriano",
+    "foto": "./imagens_jogadores/adriano.jpg"
+  },
+  {
+    "id": "adryan-1",
+    "nome": "Adryan",
+    "foto": "./imagens_jogadores/adryan-1.jpg"
+  },
+  {
+    "id": "airton",
+    "nome": "Airton",
+    "foto": "./imagens_jogadores/airton.jpg"
+  },
+  {
+    "id": "alan-patrick",
+    "nome": "Alan Patrick",
+    "foto": "./imagens_jogadores/alan-patrick.jpg"
+  },
+  {
+    "id": "alcaraz",
+    "nome": "Alcaraz",
+    "foto": "./imagens_jogadores/alcaraz.jpg"
+  },
+  {
+    "id": "alecsandro-1",
+    "nome": "Alecsandro",
+    "foto": "./imagens_jogadores/alecsandro-1.jpg"
+  },
+  {
+    "id": "alex-1",
+    "nome": "Alex",
+    "foto": "./imagens_jogadores/alex-1.jpg"
+  },
+  {
+    "id": "alex-muralha",
+    "nome": "Alex Muralha",
+    "foto": "./imagens_jogadores/alex-muralha.jpg"
+  },
+  {
+    "id": "alex_sandro",
+    "nome": "Alex Sandro",
+    "foto": "./imagens_jogadores/alex_sandro.jpg"
+  },
+  {
+    "id": "alex-silva",
+    "nome": "Alex Silva",
+    "foto": "./imagens_jogadores/alex-silva.jpg"
+  },
+  {
+    "id": "allan",
+    "nome": "Allan",
+    "foto": "./imagens_jogadores/allan.jpg"
+  },
+  {
+    "id": "almir-5",
+    "nome": "Almir",
+    "foto": "./imagens_jogadores/almir-5.jpg"
+  },
+  {
+    "id": "alvaro",
+    "nome": "Álvaro",
+    "foto": "./imagens_jogadores/alvaro.jpg"
+  },
+  {
+    "id": "amaral-1",
+    "nome": "Amaral",
+    "foto": "./imagens_jogadores/amaral-1.jpg"
+  },
+  {
+    "id": "anderson-alves",
+    "nome": "Anderson Alves",
+    "foto": "./imagens_jogadores/anderson-alves.jpg"
+  },
+  {
+    "id": "anderson-luiz",
+    "nome": "Anderson Luiz",
+    "foto": "./imagens_jogadores/anderson-luiz.jpg"
+  },
+  {
+    "id": "anderson-pico",
+    "nome": "Anderson Pico",
+    "foto": "./imagens_jogadores/anderson-pico.jpg"
+  },
+  {
+    "id": "andre-bahia",
+    "nome": "André Bahia",
+    "foto": "./imagens_jogadores/andre-bahia.jpg"
+  },
+  {
+    "id": "andre-dias",
+    "nome": "André Dias",
+    "foto": "./imagens_jogadores/andre-dias.jpg"
+  },
+  {
+    "id": "andre-gomes",
+    "nome": "André Gomes",
+    "foto": "./imagens_jogadores/andre-gomes.jpg"
+  },
+  {
+    "id": "andre-lima",
+    "nome": "André Lima",
+    "foto": "./imagens_jogadores/andre-lima.jpg"
+  },
+  {
+    "id": "andre-santos-1",
+    "nome": "André Santos",
+    "foto": "./imagens_jogadores/andre-santos-1.jpg"
+  },
+  {
+    "id": "andreas_pereira_1",
+    "nome": "Andreas Pereira",
+    "foto": "./imagens_jogadores/andreas_pereira_1.jpg"
+  },
+  {
+    "id": "andrezinho",
+    "nome": "Andrezinho",
+    "foto": "./imagens_jogadores/andrezinho.jpg"
+  },
+  {
+    "id": "arrascaeta",
+    "nome": "Arrascaeta",
+    "foto": "./imagens_jogadores/arrascaeta.jpg"
+  },
+  {
+    "id": "arthur-1",
+    "nome": "Arthur",
+    "foto": "./imagens_jogadores/arthur-1.jpg"
+  },
+  {
+    "id": "arthur-maia",
+    "nome": "Arthur Maia",
+    "foto": "./imagens_jogadores/arthur-maia.jpg"
+  },
+  {
+    "id": "arturo_vidal",
+    "nome": "Arturo Vidal",
+    "foto": "./imagens_jogadores/arturo_vidal.jpg"
+  },
+  {
+    "id": "augusto-recife",
+    "nome": "Augusto Recife",
+    "foto": "./imagens_jogadores/augusto-recife.jpg"
+  },
+  {
+    "id": "ayrton",
+    "nome": "Ayrton",
+    "foto": "./imagens_jogadores/ayrton.jpg"
+  },
+  {
+    "id": "ayrton_lucas",
+    "nome": "Ayrton Lucas",
+    "foto": "./imagens_jogadores/ayrton_lucas.jpg"
+  },
+  {
+    "id": "berrio-1",
+    "nome": "Berrío",
+    "foto": "./imagens_jogadores/berrio-1.jpg"
+  },
+  {
+    "id": "bottinelli",
+    "nome": "Bottinelli",
+    "foto": "./imagens_jogadores/bottinelli.jpg"
+  },
+  {
+    "id": "bressan",
+    "nome": "Bressan",
+    "foto": "./imagens_jogadores/bressan.jpg"
+  },
+  {
+    "id": "bruninho-1",
+    "nome": "Bruninho",
+    "foto": "./imagens_jogadores/bruninho-1.jpg"
+  },
+  {
+    "id": "bruno",
+    "nome": "Bruno",
+    "foto": "./imagens_jogadores/bruno.jpg"
+  },
+  {
+    "id": "bruno-barbosa",
+    "nome": "Bruno Barbosa",
+    "foto": "./imagens_jogadores/bruno-barbosa.jpg"
+  },
+  {
+    "id": "bruno-carvalho",
+    "nome": "Bruno Carvalho",
+    "foto": "./imagens_jogadores/bruno-carvalho.jpg"
+  },
+  {
+    "id": "bruno-henrique-1",
+    "nome": "Bruno Henrique",
+    "foto": "./imagens_jogadores/bruno-henrique-1.jpg"
+  },
+  {
+    "id": "brunomezenga",
+    "nome": "Bruno Mezenga",
+    "foto": "./imagens_jogadores/brunomezenga.jpg"
+  },
+  {
+    "id": "bruno_viana",
+    "nome": "Bruno Viana",
+    "foto": "./imagens_jogadores/bruno_viana.jpg"
+  },
+  {
+    "id": "caceres-2",
+    "nome": "Cáceres",
+    "foto": "./imagens_jogadores/caceres-2.jpg"
+  },
+  {
+    "id": "caio-2",
+    "nome": "Caio",
+    "foto": "./imagens_jogadores/caio-2.jpg"
+  },
+  {
+    "id": "camacho",
+    "nome": "Camacho",
+    "foto": "./imagens_jogadores/camacho.jpg"
+  },
+  {
+    "id": "canteros",
+    "nome": "Canteros",
+    "foto": "./imagens_jogadores/canteros.jpg"
+  },
+  {
+    "id": "carlinhos_2",
+    "nome": "Carlinhos",
+    "foto": "./imagens_jogadores/carlinhos_2.jpg"
+  },
+  {
+    "id": "carlinhos-5",
+    "nome": "Carlinhos",
+    "foto": "./imagens_jogadores/carlinhos-5.jpg"
+  },
+  {
+    "id": "carlos-eduardo-1",
+    "nome": "Carlos Eduardo",
+    "foto": "./imagens_jogadores/carlos-eduardo-1.jpg"
+  },
+  {
+    "id": "carrascal",
+    "nome": "Carrascal",
+    "foto": "./imagens_jogadores/carrascal.jpg"
+  },
+  {
+    "id": "cassio-1",
+    "nome": "Cassio",
+    "foto": "./imagens_jogadores/cassio-1.jpg"
+  },
+  {
+    "id": "cesar-1",
+    "nome": "César",
+    "foto": "./imagens_jogadores/cesar-1.jpg"
+  },
+  {
+    "id": "cesar-martins",
+    "nome": "Cesar Martins",
+    "foto": "./imagens_jogadores/cesar-martins.jpg"
+  },
+  {
+    "id": "chicao-1",
+    "nome": "Chicão",
+    "foto": "./imagens_jogadores/chicao-1.jpg"
+  },
+  {
+    "id": "china-1",
+    "nome": "China",
+    "foto": "./imagens_jogadores/china-1.jpg"
+  },
+  {
+    "id": "chiquinho-3",
+    "nome": "Chiquinho",
+    "foto": "./imagens_jogadores/chiquinho-3.jpg"
+  },
+  {
+    "id": "claiton",
+    "nome": "Claiton",
+    "foto": "./imagens_jogadores/claiton.jpg"
+  },
+  {
+    "id": "cleber-santana",
+    "nome": "Cléber Santana",
+    "foto": "./imagens_jogadores/cleber-santana.jpg"
+  },
+  {
+    "id": "cleiton_1",
+    "nome": "Cleiton",
+    "foto": "./imagens_jogadores/cleiton_1.jpg"
+  },
+  {
+    "id": "correa-1",
+    "nome": "Corrêa",
+    "foto": "./imagens_jogadores/correa-1.jpg"
+  },
+  {
+    "id": "cristian",
+    "nome": "Cristian",
+    "foto": "./imagens_jogadores/cristian.jpg"
+  },
+  {
+    "id": "cuellar",
+    "nome": "Cuéllar",
+    "foto": "./imagens_jogadores/cuellar.jpg"
+  },
+  {
+    "id": "da-silva-1",
+    "nome": "Da Silva",
+    "foto": "./imagens_jogadores/da-silva-1.jpg"
+  },
+  {
+    "id": "daniel_sales_1",
+    "nome": "Daniel Sales",
+    "foto": "./imagens_jogadores/daniel_sales_1.jpg"
+  },
+  {
+    "id": "danilo",
+    "nome": "Danilo",
+    "foto": "./imagens_jogadores/danilo.jpg"
+  },
+  {
+    "id": "david",
+    "nome": "David",
+    "foto": "./imagens_jogadores/david.jpg"
+  },
+  {
+    "id": "david_luiz_1",
+    "nome": "David Luiz",
+    "foto": "./imagens_jogadores/david_luiz_1.jpg"
+  },
+  {
+    "id": "de_la_cruz",
+    "nome": "De La Cruz",
+    "foto": "./imagens_jogadores/de_la_cruz.jpg"
+  },
+  {
+    "id": "deivid",
+    "nome": "Deivid",
+    "foto": "./imagens_jogadores/deivid.jpg"
+  },
+  {
+    "id": "denilson",
+    "nome": "Denilson",
+    "foto": "./imagens_jogadores/denilson.jpg"
+  },
+  {
+    "id": "denis-marques",
+    "nome": "Dênis Marques",
+    "foto": "./imagens_jogadores/denis-marques.jpg"
+  },
+  {
+    "id": "diego",
+    "nome": "Diego",
+    "foto": "./imagens_jogadores/diego.jpg"
+  },
+  {
+    "id": "diego-2",
+    "nome": "Diego",
+    "foto": "./imagens_jogadores/diego-2.jpg"
+  },
+  {
+    "id": "diego-alves",
+    "nome": "Diego Alves",
+    "foto": "./imagens_jogadores/diego-alves.jpg"
+  },
+  {
+    "id": "diego-mauricio",
+    "nome": "Diego Maurício",
+    "foto": "./imagens_jogadores/diego-mauricio.jpg"
+  },
+  {
+    "id": "diego-silva-1",
+    "nome": "Diego Silva",
+    "foto": "./imagens_jogadores/diego-silva-1.jpg"
+  },
+  {
+    "id": "diego-silva",
+    "nome": "Diego Silva",
+    "foto": "./imagens_jogadores/diego-silva.jpg"
+  },
+  {
+    "id": "diego-souza",
+    "nome": "Diego Souza",
+    "foto": "./imagens_jogadores/diego-souza.jpg"
+  },
+  {
+    "id": "diego-tardelli",
+    "nome": "Diego Tardelli",
+    "foto": "./imagens_jogadores/diego-tardelli.jpg"
+  },
+  {
+    "id": "digao-1",
+    "nome": "Digão",
+    "foto": "./imagens_jogadores/digao-1.jpg"
+  },
+  {
+    "id": "dimba",
+    "nome": "Dimba",
+    "foto": "./imagens_jogadores/dimba.jpg"
+  },
+  {
+    "id": "diogo-1",
+    "nome": "Diogo",
+    "foto": "./imagens_jogadores/diogo-1.jpg"
+  },
+  {
+    "id": "diogo-2",
+    "nome": "Diogo",
+    "foto": "./imagens_jogadores/diogo-2.jpg"
+  },
+  {
+    "id": "donatti-1",
+    "nome": "Donatti",
+    "foto": "./imagens_jogadores/donatti-1.jpg"
+  },
+  {
+    "id": "douglas-silva",
+    "nome": "Douglas Silva",
+    "foto": "./imagens_jogadores/douglas-silva.jpg"
+  },
+  {
+    "id": "ederson",
+    "nome": "Ederson",
+    "foto": "./imagens_jogadores/ederson.jpg"
+  },
+  {
+    "id": "edilson",
+    "nome": "Edilson",
+    "foto": "./imagens_jogadores/edilson.jpg"
+  },
+  {
+    "id": "edmilson-2",
+    "nome": "Edmilson",
+    "foto": "./imagens_jogadores/edmilson-2.jpg"
+  },
+  {
+    "id": "edson-5",
+    "nome": "Edson",
+    "foto": "./imagens_jogadores/edson-5.jpg"
+  },
+  {
+    "id": "eduardo-da-silva",
+    "nome": "Eduardo da Silva",
+    "foto": "./imagens_jogadores/eduardo-da-silva.jpg"
+  },
+  {
+    "id": "egidio",
+    "nome": "Egí­dio",
+    "foto": "./imagens_jogadores/egidio.jpg"
+  },
+  {
+    "id": "elano",
+    "nome": "Elano",
+    "foto": "./imagens_jogadores/elano.jpg"
+  },
+  {
+    "id": "elias",
+    "nome": "Elias",
+    "foto": "./imagens_jogadores/elias.jpg"
+  },
+  {
+    "id": "elton",
+    "nome": "Elton",
+    "foto": "./imagens_jogadores/elton.jpg"
+  },
+  {
+    "id": "emerson-2",
+    "nome": "Emerson",
+    "foto": "./imagens_jogadores/emerson-2.jpg"
+  },
+  {
+    "id": "emerson-3",
+    "nome": "Emerson",
+    "foto": "./imagens_jogadores/emerson-3.jpg"
+  },
+  {
+    "id": "emerson_royal",
+    "nome": "Emerson Royal",
+    "foto": "./imagens_jogadores/emerson_royal.jpg"
+  },
+  {
+    "id": "erick-flores",
+    "nome": "Erick Flores",
+    "foto": "./imagens_jogadores/erick-flores.jpg"
+  },
+  {
+    "id": "evandro",
+    "nome": "Evandro",
+    "foto": "./imagens_jogadores/evandro.jpg"
+  },
+  {
+    "id": "everton-1",
+    "nome": "Everton",
+    "foto": "./imagens_jogadores/everton-1.jpg"
+  },
+  {
+    "id": "everton_cebolinha",
+    "nome": "Everton Cebolinha",
+    "foto": "./imagens_jogadores/everton_cebolinha.jpg"
+  },
+  {
+    "id": "everton-ribeiro",
+    "nome": "Everton Ribeiro",
+    "foto": "./imagens_jogadores/everton-ribeiro.jpg"
+  },
+  {
+    "id": "everton-silva",
+    "nome": "Everton Silva",
+    "foto": "./imagens_jogadores/everton-silva.jpg"
+  },
+  {
+    "id": "evertton_araujo",
+    "nome": "Evertton Araújo",
+    "foto": "./imagens_jogadores/evertton_araujo.jpg"
+  },
+  {
+    "id": "fabiano-eller",
+    "nome": "Fabiano Eller",
+    "foto": "./imagens_jogadores/fabiano-eller.jpg"
+  },
+  {
+    "id": "fabiano-oliveira",
+    "nome": "Fabiano Oliveira",
+    "foto": "./imagens_jogadores/fabiano-oliveira.jpg"
+  },
+  {
+    "id": "fabinho-1",
+    "nome": "Fabinho",
+    "foto": "./imagens_jogadores/fabinho-1.jpg"
+  },
+  {
+    "id": "fabio-1",
+    "nome": "Fabio",
+    "foto": "./imagens_jogadores/fabio-1.jpg"
+  },
+  {
+    "id": "fabioluciano",
+    "nome": "Fabio Luciano",
+    "foto": "./imagens_jogadores/fabioluciano.jpg"
+  },
+  {
+    "id": "fabricio_bruno_1",
+    "nome": "Fabricio Bruno",
+    "foto": "./imagens_jogadores/fabricio_bruno_1.jpg"
+  },
+  {
+    "id": "fabricio",
+    "nome": "Fabrí­cio",
+    "foto": "./imagens_jogadores/fabricio.jpg"
+  },
+  {
+    "id": "felipe-1",
+    "nome": "Felipe",
+    "foto": "./imagens_jogadores/felipe-1.jpg"
+  },
+  {
+    "id": "felipe-3",
+    "nome": "Felipe",
+    "foto": "./imagens_jogadores/felipe-3.jpg"
+  },
+  {
+    "id": "felipe-mello",
+    "nome": "Felipe Mello",
+    "foto": "./imagens_jogadores/felipe-mello.jpg"
+  },
+  {
+    "id": "felipe-vizeu",
+    "nome": "Felipe Vizeu",
+    "foto": "./imagens_jogadores/felipe-vizeu.jpg"
+  },
+  {
+    "id": "fellype-gabriel",
+    "nome": "Fellype Gabriel",
+    "foto": "./imagens_jogadores/fellype-gabriel.jpg"
+  },
+  {
+    "id": "fernandinho-2",
+    "nome": "Fernandinho",
+    "foto": "./imagens_jogadores/fernandinho-2.jpg"
+  },
+  {
+    "id": "fernando-4",
+    "nome": "Fernando",
+    "foto": "./imagens_jogadores/fernando-4.jpg"
+  },
+  {
+    "id": "fernando-5",
+    "nome": "Fernando",
+    "foto": "./imagens_jogadores/fernando-5.jpg"
+  },
+  {
+    "id": "fernando-baiano",
+    "nome": "Fernando Baiano",
+    "foto": "./imagens_jogadores/fernando-baiano.jpg"
+  },
+  {
+    "id": "fernando-diniz",
+    "nome": "Fernando Diniz",
+    "foto": "./imagens_jogadores/fernando-diniz.jpg"
+  },
+  {
+    "id": "fierro",
+    "nome": "Fierro",
+    "foto": "./imagens_jogadores/fierro.jpg"
+  },
+  {
+    "id": "filipe_luis_1",
+    "nome": "Filipe Luis",
+    "foto": "./imagens_jogadores/filipe_luis_1.jpg"
+  },
+  {
+    "id": "flavio-4",
+    "nome": "Flavio",
+    "foto": "./imagens_jogadores/flavio-4.jpg"
+  },
+  {
+    "id": "flavio-tanajura",
+    "nome": "Flavio Tanajura",
+    "foto": "./imagens_jogadores/flavio-tanajura.jpg"
+  },
+  {
+    "id": "frauches",
+    "nome": "Frauches",
+    "foto": "./imagens_jogadores/frauches.jpg"
+  },
+  {
+    "id": "gabriel-2",
+    "nome": "Gabriel",
+    "foto": "./imagens_jogadores/gabriel-2.jpg"
+  },
+  {
+    "id": "gabriel-barbosa",
+    "nome": "Gabriel Barbosa",
+    "foto": "./imagens_jogadores/gabriel-barbosa.jpg"
+  },
+  {
+    "id": "gabriel-batista",
+    "nome": "Gabriel Batista",
+    "foto": "./imagens_jogadores/gabriel-batista.jpg"
+  },
+  {
+    "id": "gabriel_noga",
+    "nome": "Gabriel Noga",
+    "foto": "./imagens_jogadores/gabriel_noga.jpg"
+  },
+  {
+    "id": "gamarra",
+    "nome": "Gamarra",
+    "foto": "./imagens_jogadores/gamarra.jpg"
+  },
+  {
+    "id": "gauchinho",
+    "nome": "Gauchinho",
+    "foto": "./imagens_jogadores/gauchinho.jpg"
+  },
+  {
+    "id": "gerson-2",
+    "nome": "Gerson",
+    "foto": "./imagens_jogadores/gerson-2.jpg"
+  },
+  {
+    "id": "geuvanio",
+    "nome": "Geuvânio",
+    "foto": "./imagens_jogadores/geuvanio.jpg"
+  },
+  {
+    "id": "gilmar",
+    "nome": "Gilmar",
+    "foto": "./imagens_jogadores/gilmar.jpg"
+  },
+  {
+    "id": "gomes",
+    "nome": "Gomes",
+    "foto": "./imagens_jogadores/gomes.jpg"
+  },
+  {
+    "id": "gonzalo_plata_1",
+    "nome": "Gonzalo Plata",
+    "foto": "./imagens_jogadores/gonzalo_plata_1.jpg"
+  },
+  {
+    "id": "guerrero",
+    "nome": "Guerrero",
+    "foto": "./imagens_jogadores/guerrero.jpg"
+  },
+  {
+    "id": "guilherme_gomes",
+    "nome": "Guilherme Gomes",
+    "foto": "./imagens_jogadores/guilherme_gomes.jpg"
+  },
+  {
+    "id": "gustavo-2",
+    "nome": "Gustavo",
+    "foto": "./imagens_jogadores/gustavo-2.jpg"
+  },
+  {
+    "id": "gustavo-henrique",
+    "nome": "Gustavo Henrique",
+    "foto": "./imagens_jogadores/gustavo-henrique.jpg"
+  },
+  {
+    "id": "henrique-1",
+    "nome": "Henrique",
+    "foto": "./imagens_jogadores/henrique-1.jpg"
+  },
+  {
+    "id": "henrique-dourado-1",
+    "nome": "Henrique Dourado",
+    "foto": "./imagens_jogadores/henrique-dourado-1.jpg"
+  },
+  {
+    "id": "hernane-1",
+    "nome": "Hernane",
+    "foto": "./imagens_jogadores/hernane-1.jpg"
+  },
+  {
+    "id": "hugo-2",
+    "nome": "Hugo",
+    "foto": "./imagens_jogadores/hugo-2.jpg"
+  },
+  {
+    "id": "hugo_moura",
+    "nome": "Hugo Moura",
+    "foto": "./imagens_jogadores/hugo_moura.jpg"
+  },
+  {
+    "id": "hugo_souza",
+    "nome": "Hugo Souza",
+    "foto": "./imagens_jogadores/hugo_souza.jpg"
+  },
+  {
+    "id": "ibson-1",
+    "nome": "Ibson",
+    "foto": "./imagens_jogadores/ibson-1.jpg"
+  },
+  {
+    "id": "igor",
+    "nome": "Igor",
+    "foto": "./imagens_jogadores/igor.jpg"
+  },
+  {
+    "id": "igor_jesus",
+    "nome": "Igor Jesus",
+    "foto": "./imagens_jogadores/igor_jesus.jpg"
+  },
+  {
+    "id": "igor-sartori",
+    "nome": "Igor Sartori",
+    "foto": "./imagens_jogadores/igor-sartori.jpg"
+  },
+  {
+    "id": "irineu-1",
+    "nome": "Irineu",
+    "foto": "./imagens_jogadores/irineu-1.jpg"
+  },
+  {
+    "id": "isla",
+    "nome": "Isla",
+    "foto": "./imagens_jogadores/isla.jpg"
+  },
+  {
+    "id": "jackson-1",
+    "nome": "Jackson",
+    "foto": "./imagens_jogadores/jackson-1.jpg"
+  },
+  {
+    "id": "jael",
+    "nome": "Jael",
+    "foto": "./imagens_jogadores/jael.jpg"
+  },
+  {
+    "id": "jailton-1",
+    "nome": "Jailton",
+    "foto": "./imagens_jogadores/jailton-1.jpg"
+  },
+  {
+    "id": "jaja-2",
+    "nome": "Jajá",
+    "foto": "./imagens_jogadores/jaja-2.jpg"
+  },
+  {
+    "id": "jean",
+    "nome": "Jean",
+    "foto": "./imagens_jogadores/jean.jpg"
+  },
+  {
+    "id": "jean-2",
+    "nome": "Jean",
+    "foto": "./imagens_jogadores/jean-2.jpg"
+  },
+  {
+    "id": "jean-lucas",
+    "nome": "Jean Lucas",
+    "foto": "./imagens_jogadores/jean-lucas.jpg"
+  },
+  {
+    "id": "joao-lucas",
+    "nome": "João Lucas",
+    "foto": "./imagens_jogadores/joao-lucas.jpg"
+  },
+  {
+    "id": "joao-paulo-2",
+    "nome": "João Paulo",
+    "foto": "./imagens_jogadores/joao-paulo-2.jpg"
+  },
+  {
+    "id": "joao_victor",
+    "nome": "João Victor",
+    "foto": "./imagens_jogadores/joao_victor.jpg"
+  },
+  {
+    "id": "jonas",
+    "nome": "Jonas",
+    "foto": "./imagens_jogadores/jonas.jpg"
+  },
+  {
+    "id": "jonatas",
+    "nome": "Jônatas",
+    "foto": "./imagens_jogadores/jonatas.jpg"
+  },
+  {
+    "id": "jorge-1",
+    "nome": "Jorge",
+    "foto": "./imagens_jogadores/jorge-1.jpg"
+  },
+  {
+    "id": "jorginho_1",
+    "nome": "Jorginho",
+    "foto": "./imagens_jogadores/jorginho_1.jpg"
+  },
+  {
+    "id": "josafa",
+    "nome": "Josafá",
+    "foto": "./imagens_jogadores/josafa.jpg"
+  },
+  {
+    "id": "josiel-1",
+    "nome": "Josiel",
+    "foto": "./imagens_jogadores/josiel-1.jpg"
+  },
+  {
+    "id": "juanmaldonado",
+    "nome": "Juan",
+    "foto": "./imagens_jogadores/juanmaldonado.jpg"
+  },
+  {
+    "id": "juliano-1",
+    "nome": "Juliano",
+    "foto": "./imagens_jogadores/juliano-1.jpg"
+  },
+  {
+    "id": "julio-cesar-morais-1",
+    "nome": "Julio Cesar Morais",
+    "foto": "./imagens_jogadores/julio-cesar-morais-1.jpg"
+  },
+  {
+    "id": "juninho_1",
+    "nome": "Juninho",
+    "foto": "./imagens_jogadores/juninho_1.jpg"
+  },
+  {
+    "id": "juninho-paulista-1",
+    "nome": "Juninho Paulista",
+    "foto": "./imagens_jogadores/juninho-paulista-1.jpg"
+  },
+  {
+    "id": "junior_1",
+    "nome": "Júnior",
+    "foto": "./imagens_jogadores/junior_1.jpg"
+  },
+  {
+    "id": "junior-cesar",
+    "nome": "Júnior Cesar",
+    "foto": "./imagens_jogadores/junior-cesar.jpg"
+  },
+  {
+    "id": "kayke-1",
+    "nome": "Kayke",
+    "foto": "./imagens_jogadores/kayke-1.jpg"
+  },
+  {
+    "id": "kenedy",
+    "nome": "Kenedy",
+    "foto": "./imagens_jogadores/kenedy.jpg"
+  },
+  {
+    "id": "kleberson-1",
+    "nome": "Kléberson",
+    "foto": "./imagens_jogadores/kleberson-1.jpg"
+  },
+  {
+    "id": "lazaro",
+    "nome": "Lázaro",
+    "foto": "./imagens_jogadores/lazaro.jpg"
+  },
+  {
+    "id": "leandro-damiao",
+    "nome": "Leandro Damião",
+    "foto": "./imagens_jogadores/leandro-damiao.jpg"
+  },
+  {
+    "id": "leandro-salino-1",
+    "nome": "Leandro Salino",
+    "foto": "./imagens_jogadores/leandro-salino-1.jpg"
+  },
+  {
+    "id": "lenon",
+    "nome": "Lenon",
+    "foto": "./imagens_jogadores/lenon.jpg"
+  },
+  {
+    "id": "leo-4",
+    "nome": "Léo",
+    "foto": "./imagens_jogadores/leo-4.jpg"
+  },
+  {
+    "id": "leo-duarte-1",
+    "nome": "Leo Duarte",
+    "foto": "./imagens_jogadores/leo-duarte-1.jpg"
+  },
+  {
+    "id": "leo-lima-1",
+    "nome": "Léo Lima",
+    "foto": "./imagens_jogadores/leo-lima-1.jpg"
+  },
+  {
+    "id": "leo-medeiros-1",
+    "nome": "Léo Medeiros",
+    "foto": "./imagens_jogadores/leo-medeiros-1.jpg"
+  },
+  {
+    "id": "leo-oliveira-1",
+    "nome": "Léo Oliveira",
+    "foto": "./imagens_jogadores/leo-oliveira-1.jpg"
+  },
+  {
+    "id": "leo_ortiz_1",
+    "nome": "Léo Ortiz",
+    "foto": "./imagens_jogadores/leo_ortiz_1.jpg"
+  },
+  {
+    "id": "leo-pereira",
+    "nome": "Léo Pereira",
+    "foto": "./imagens_jogadores/leo-pereira.jpg"
+  },
+  {
+    "id": "leonardo-2",
+    "nome": "Leonardo",
+    "foto": "./imagens_jogadores/leonardo-2.jpg"
+  },
+  {
+    "id": "leonardo-moura-1",
+    "nome": "Leonardo Moura",
+    "foto": "./imagens_jogadores/leonardo-moura-1.jpg"
+  },
+  {
+    "id": "liedson-1",
+    "nome": "Liédson",
+    "foto": "./imagens_jogadores/liedson-1.jpg"
+  },
+  {
+    "id": "lincoln-2",
+    "nome": "Lincoln",
+    "foto": "./imagens_jogadores/lincoln-2.jpg"
+  },
+  {
+    "id": "lorran_2",
+    "nome": "Lorran",
+    "foto": "./imagens_jogadores/lorran_2.jpg"
+  },
+  {
+    "id": "lucas-mugni",
+    "nome": "Lucas Mugni",
+    "foto": "./imagens_jogadores/lucas-mugni.jpg"
+  },
+  {
+    "id": "lucas-paqueta-1",
+    "nome": "Lucas Paqueta",
+    "foto": "./imagens_jogadores/lucas-paqueta-1.jpg"
+  },
+  {
+    "id": "lucas-silva-1",
+    "nome": "Lucas Silva",
+    "foto": "./imagens_jogadores/lucas-silva-1.jpg"
+  },
+  {
+    "id": "luciano-baiano-1",
+    "nome": "Luciano Baiano",
+    "foto": "./imagens_jogadores/luciano-baiano-1.jpg"
+  },
+  {
+    "id": "luiz-antonio-1",
+    "nome": "Luiz Antonio",
+    "foto": "./imagens_jogadores/luiz-antonio-1.jpg"
+  },
+  {
+    "id": "luiz_araujo_1",
+    "nome": "Luiz Araújo",
+    "foto": "./imagens_jogadores/luiz_araujo_1.jpg"
+  },
+  {
+    "id": "luizao-1",
+    "nome": "Luizão",
+    "foto": "./imagens_jogadores/luizao-1.jpg"
+  },
+  {
+    "id": "luizinho-1",
+    "nome": "Luizinho",
+    "foto": "./imagens_jogadores/luizinho-1.jpg"
+  },
+  {
+    "id": "magal",
+    "nome": "Magal",
+    "foto": "./imagens_jogadores/magal.jpg"
+  },
+  {
+    "id": "maldonado",
+    "nome": "Maldonado",
+    "foto": "./imagens_jogadores/maldonado.jpg"
+  },
+  {
+    "id": "mancuello",
+    "nome": "Mancuello",
+    "foto": "./imagens_jogadores/mancuello.jpg"
+  },
+  {
+    "id": "marcelinho",
+    "nome": "Marcelinho",
+    "foto": "./imagens_jogadores/marcelinho.jpg"
+  },
+  {
+    "id": "marcelinho-parai-shy-ba",
+    "nome": "Marcelinho Paraí­ba",
+    "foto": "./imagens_jogadores/marcelinho-parai-shy-ba.jpg"
+  },
+  {
+    "id": "marcelo-3",
+    "nome": "Marcelo",
+    "foto": "./imagens_jogadores/marcelo-3.jpg"
+  },
+  {
+    "id": "marcelo",
+    "nome": "Marcelo",
+    "foto": "./imagens_jogadores/marcelo.jpg"
+  },
+  {
+    "id": "marcelo-cirino",
+    "nome": "Marcelo Cirino",
+    "foto": "./imagens_jogadores/marcelo-cirino.jpg"
+  },
+  {
+    "id": "marcelolomba",
+    "nome": "Marcelo Lomba",
+    "foto": "./imagens_jogadores/marcelolomba.jpg"
+  },
+  {
+    "id": "marcelo-moreno",
+    "nome": "Marcelo Moreno",
+    "foto": "./imagens_jogadores/marcelo-moreno.jpg"
+  },
+  {
+    "id": "marcinho-1",
+    "nome": "Marcinho",
+    "foto": "./imagens_jogadores/marcinho-1.jpg"
+  },
+  {
+    "id": "marcio-araujo-1",
+    "nome": "Márcio Araújo",
+    "foto": "./imagens_jogadores/marcio-araujo-1.jpg"
+  },
+  {
+    "id": "marcos-denner-1",
+    "nome": "Marcos Denner",
+    "foto": "./imagens_jogadores/marcos-denner-1.jpg"
+  },
+  {
+    "id": "marcos-gonzales",
+    "nome": "Marcos Gonzales",
+    "foto": "./imagens_jogadores/marcos-gonzales.jpg"
+  },
+  {
+    "id": "marinho_1",
+    "nome": "Marinho",
+    "foto": "./imagens_jogadores/marinho_1.jpg"
+  },
+  {
+    "id": "marllon",
+    "nome": "Marllon",
+    "foto": "./imagens_jogadores/marllon.jpg"
+  },
+  {
+    "id": "marlon",
+    "nome": "Marlon",
+    "foto": "./imagens_jogadores/marlon.jpg"
+  },
+  {
+    "id": "marlos-moreno",
+    "nome": "Marlos Moreno",
+    "foto": "./imagens_jogadores/marlos-moreno.jpg"
+  },
+  {
+    "id": "marquinhos-2",
+    "nome": "Marquinhos",
+    "foto": "./imagens_jogadores/marquinhos-2.jpg"
+  },
+  {
+    "id": "marquinhos",
+    "nome": "Marquinhos",
+    "foto": "./imagens_jogadores/marquinhos.jpg"
+  },
+  {
+    "id": "mateusao_1",
+    "nome": "Mateusão",
+    "foto": "./imagens_jogadores/mateusao_1.jpg"
+  },
+  {
+    "id": "matheus-1",
+    "nome": "Matheus",
+    "foto": "./imagens_jogadores/matheus-1.jpg"
+  },
+  {
+    "id": "matheus_cunha",
+    "nome": "Matheus Cunha",
+    "foto": "./imagens_jogadores/matheus_cunha.jpg"
+  },
+  {
+    "id": "matheus_franca",
+    "nome": "Matheus França",
+    "foto": "./imagens_jogadores/matheus_franca.jpg"
+  },
+  {
+    "id": "matheus_goncalves",
+    "nome": "Matheus Gonçalves",
+    "foto": "./imagens_jogadores/matheus_goncalves.jpg"
+  },
+  {
+    "id": "matheus-savio",
+    "nome": "Matheus Sávio",
+    "foto": "./imagens_jogadores/matheus-savio.jpg"
+  },
+  {
+    "id": "matheus_thuler",
+    "nome": "Matheus Thuler",
+    "foto": "./imagens_jogadores/matheus_thuler.jpg"
+  },
+  {
+    "id": "matheuzinho",
+    "nome": "Matheuzinho",
+    "foto": "./imagens_jogadores/matheuzinho.jpg"
+  },
+  {
+    "id": "matias_vina",
+    "nome": "Matías Viña",
+    "foto": "./imagens_jogadores/matias_vina.jpg"
+  },
+  {
+    "id": "max_1",
+    "nome": "Max",
+    "foto": "./imagens_jogadores/max_1.jpg"
+  },
+  {
+    "id": "maxi",
+    "nome": "Maxi",
+    "foto": "./imagens_jogadores/maxi.jpg"
+  },
+  {
+    "id": "michael",
+    "nome": "Michael",
+    "foto": "./imagens_jogadores/michael.jpg"
+  },
+  {
+    "id": "michael-1",
+    "nome": "Michael",
+    "foto": "./imagens_jogadores/michael-1.jpg"
+  },
+  {
+    "id": "moises-1",
+    "nome": "Moises",
+    "foto": "./imagens_jogadores/moises-1.jpg"
+  },
+  {
+    "id": "mozart-1",
+    "nome": "Mozart",
+    "foto": "./imagens_jogadores/mozart-1.jpg"
+  },
+  {
+    "id": "muralha-1",
+    "nome": "Muralha",
+    "foto": "./imagens_jogadores/muralha-1.jpg"
+  },
+  {
+    "id": "natan",
+    "nome": "Natan",
+    "foto": "./imagens_jogadores/natan.jpg"
+  },
+  {
+    "id": "negreiros-1",
+    "nome": "Negreiros",
+    "foto": "./imagens_jogadores/negreiros-1.jpg"
+  },
+  {
+    "id": "negueba",
+    "nome": "Negueba",
+    "foto": "./imagens_jogadores/negueba.jpg"
+  },
+  {
+    "id": "nixon-1",
+    "nome": "Nixon",
+    "foto": "./imagens_jogadores/nixon-1.jpg"
+  },
+  {
+    "id": "obina_1",
+    "nome": "Obina",
+    "foto": "./imagens_jogadores/obina_1.jpg"
+  },
+  {
+    "id": "pablo",
+    "nome": "Pablo",
+    "foto": "./imagens_jogadores/pablo.jpg"
+  },
+  {
+    "id": "pablo-mari-1",
+    "nome": "Pablo Marí",
+    "foto": "./imagens_jogadores/pablo-mari-1.jpg"
+  },
+  {
+    "id": "para",
+    "nome": "Pará",
+    "foto": "./imagens_jogadores/para.jpg"
+  },
+  {
+    "id": "paulinho-3",
+    "nome": "Paulinho",
+    "foto": "./imagens_jogadores/paulinho-3.jpg"
+  },
+  {
+    "id": "paulinho-2",
+    "nome": "Paulinho",
+    "foto": "./imagens_jogadores/paulinho-2.jpg"
+  },
+  {
+    "id": "paulo-sergio-1",
+    "nome": "Paulo Sérgio",
+    "foto": "./imagens_jogadores/paulo-sergio-1.jpg"
+  },
+  {
+    "id": "paulo-victor-1",
+    "nome": "Paulo Victor",
+    "foto": "./imagens_jogadores/paulo-victor-1.jpg"
+  },
+  {
+    "id": "pedro",
+    "nome": "Pedro",
+    "foto": "./imagens_jogadores/pedro.jpg"
+  },
+  {
+    "id": "pedro-rocha",
+    "nome": "Pedro Rocha",
+    "foto": "./imagens_jogadores/pedro-rocha.jpg"
+  },
+  {
+    "id": "pepe",
+    "nome": "Pepê",
+    "foto": "./imagens_jogadores/pepe.jpg"
+  },
+  {
+    "id": "peralta-1",
+    "nome": "Peralta",
+    "foto": "./imagens_jogadores/peralta-1.jpg"
+  },
+  {
+    "id": "petkovic",
+    "nome": "Petkovic",
+    "foto": "./imagens_jogadores/petkovic.jpg"
+  },
+  {
+    "id": "piris-da-motta",
+    "nome": "Piris da Motta",
+    "foto": "./imagens_jogadores/piris-da-motta.jpg"
+  },
+  {
+    "id": "pulgar",
+    "nome": "Pulgar",
+    "foto": "./imagens_jogadores/pulgar.jpg"
+  },
+  {
+    "id": "rafael-2",
+    "nome": "Rafael",
+    "foto": "./imagens_jogadores/rafael-2.jpg"
+  },
+  {
+    "id": "rafael-galhardo",
+    "nome": "Rafael Galhardo",
+    "foto": "./imagens_jogadores/rafael-galhardo.jpg"
+  },
+  {
+    "id": "rafael-gaucho-1",
+    "nome": "Rafael Gaúcho",
+    "foto": "./imagens_jogadores/rafael-gaucho-1.jpg"
+  },
+  {
+    "id": "rafael-vaz",
+    "nome": "Rafael Vaz",
+    "foto": "./imagens_jogadores/rafael-vaz.jpg"
+  },
+  {
+    "id": "rafinha",
+    "nome": "Rafinha",
+    "foto": "./imagens_jogadores/rafinha.jpg"
+  },
+  {
+    "id": "rafinha-1",
+    "nome": "Rafinha",
+    "foto": "./imagens_jogadores/rafinha-1.jpg"
+  },
+  {
+    "id": "ramirez-2",
+    "nome": "Ramirez",
+    "foto": "./imagens_jogadores/ramirez-2.jpg"
+  },
+  {
+    "id": "ramon",
+    "nome": "Ramon",
+    "foto": "./imagens_jogadores/ramon.jpg"
+  },
+  {
+    "id": "ramon_1",
+    "nome": "Ramon",
+    "foto": "./imagens_jogadores/ramon_1.jpg"
+  },
+  {
+    "id": "recife",
+    "nome": "Recife",
+    "foto": "./imagens_jogadores/recife.jpg"
+  },
+  {
+    "id": "reginaldo-araujo",
+    "nome": "Reginaldo Araújo",
+    "foto": "./imagens_jogadores/reginaldo-araujo.jpg"
+  },
+  {
+    "id": "reinier",
+    "nome": "Reinier",
+    "foto": "./imagens_jogadores/reinier.jpg"
+  },
+  {
+    "id": "renato-abreu",
+    "nome": "Renato Abreu",
+    "foto": "./imagens_jogadores/renato-abreu.jpg"
+  },
+  {
+    "id": "renato-augusto-1",
+    "nome": "Renato Augusto",
+    "foto": "./imagens_jogadores/renato-augusto-1.jpg"
+  },
+  {
+    "id": "renato-santos",
+    "nome": "Renato Santos",
+    "foto": "./imagens_jogadores/renato-santos.jpg"
+  },
+  {
+    "id": "renato-silva-1",
+    "nome": "Renato Silva",
+    "foto": "./imagens_jogadores/renato-silva-1.jpg"
+  },
+  {
+    "id": "rene",
+    "nome": "Renê",
+    "foto": "./imagens_jogadores/rene.jpg"
+  },
+  {
+    "id": "rever-1",
+    "nome": "Réver",
+    "foto": "./imagens_jogadores/rever-1.jpg"
+  },
+  {
+    "id": "rhodolfo",
+    "nome": "Rhodolfo",
+    "foto": "./imagens_jogadores/rhodolfo.jpg"
+  },
+  {
+    "id": "ricardo-lopes-1",
+    "nome": "Ricardo Lopes",
+    "foto": "./imagens_jogadores/ricardo-lopes-1.jpg"
+  },
+  {
+    "id": "robson-2",
+    "nome": "Robson",
+    "foto": "./imagens_jogadores/robson-2.jpg"
+  },
+  {
+    "id": "rodinei",
+    "nome": "Rodinei",
+    "foto": "./imagens_jogadores/rodinei.jpg"
+  },
+  {
+    "id": "rodolfo-1",
+    "nome": "Rodolfo",
+    "foto": "./imagens_jogadores/rodolfo-1.jpg"
+  },
+  {
+    "id": "rodrigo-alvim",
+    "nome": "Rodrigo Alvim",
+    "foto": "./imagens_jogadores/rodrigo-alvim.jpg"
+  },
+  {
+    "id": "rodrigo-antonio",
+    "nome": "Rodrigo Antonio",
+    "foto": "./imagens_jogadores/rodrigo-antonio.jpg"
+  },
+  {
+    "id": "rodrigo-caio-1",
+    "nome": "Rodrigo Caio",
+    "foto": "./imagens_jogadores/rodrigo-caio-1.jpg"
+  },
+  {
+    "id": "rodrigo-muniz",
+    "nome": "Rodrigo Muniz",
+    "foto": "./imagens_jogadores/rodrigo-muniz.jpg"
+  },
+  {
+    "id": "rodrigo-silva-1",
+    "nome": "Rodrigo Silva",
+    "foto": "./imagens_jogadores/rodrigo-silva-1.jpg"
+  },
+  {
+    "id": "roger-1",
+    "nome": "Roger",
+    "foto": "./imagens_jogadores/roger-1.jpg"
+  },
+  {
+    "id": "roger-2",
+    "nome": "Roger",
+    "foto": "./imagens_jogadores/roger-2.jpg"
+  },
+  {
+    "id": "roma-1",
+    "nome": "Roma",
+    "foto": "./imagens_jogadores/roma-1.jpg"
+  },
+  {
+    "id": "romulo-1",
+    "nome": "Rômulo",
+    "foto": "./imagens_jogadores/romulo-1.jpg"
+  },
+  {
+    "id": "romulo",
+    "nome": "Rômulo",
+    "foto": "./imagens_jogadores/romulo.jpg"
+  },
+  {
+    "id": "ronaldinho-gaucho",
+    "nome": "Ronaldinho Gaúcho",
+    "foto": "./imagens_jogadores/ronaldinho-gaucho.jpg"
+  },
+  {
+    "id": "ronaldo_1",
+    "nome": "Ronaldo",
+    "foto": "./imagens_jogadores/ronaldo_1.jpg"
+  },
+  {
+    "id": "ronaldo_angelim_1",
+    "nome": "Ronaldo Angelim",
+    "foto": "./imagens_jogadores/ronaldo_angelim_1.jpg"
+  },
+  {
+    "id": "roni-1",
+    "nome": "Roni",
+    "foto": "./imagens_jogadores/roni-1.jpg"
+  },
+  {
+    "id": "rossi_1",
+    "nome": "Rossi",
+    "foto": "./imagens_jogadores/rossi_1.jpg"
+  },
+  {
+    "id": "samir-1",
+    "nome": "Samir",
+    "foto": "./imagens_jogadores/samir-1.jpg"
+  },
+  {
+    "id": "samuel_lino",
+    "nome": "Samuel Lino",
+    "foto": "./imagens_jogadores/samuel_lino.jpg"
+  },
+  {
+    "id": "santos_1",
+    "nome": "Santos",
+    "foto": "./imagens_jogadores/santos_1.jpg"
+  },
+  {
+    "id": "saul",
+    "nome": "Saúl",
+    "foto": "./imagens_jogadores/saul.jpg"
+  },
+  {
+    "id": "souza-4",
+    "nome": "Souza",
+    "foto": "./imagens_jogadores/souza-4.jpg"
+  },
+  {
+    "id": "souza-2",
+    "nome": "Souza",
+    "foto": "./imagens_jogadores/souza-2.jpg"
+  },
+  {
+    "id": "thiago",
+    "nome": "Thiago",
+    "foto": "./imagens_jogadores/thiago.jpg"
+  },
+  {
+    "id": "thiago-campos-1",
+    "nome": "Thiago Campos",
+    "foto": "./imagens_jogadores/thiago-campos-1.jpg"
+  },
+  {
+    "id": "thiago-gosling-1",
+    "nome": "Thiago Gosling",
+    "foto": "./imagens_jogadores/thiago-gosling-1.jpg"
+  },
+  {
+    "id": "thiago-maia-1",
+    "nome": "Thiago Maia",
+    "foto": "./imagens_jogadores/thiago-maia-1.jpg"
+  },
+  {
+    "id": "thiago-neves",
+    "nome": "Thiago Neves",
+    "foto": "./imagens_jogadores/thiago-neves.jpg"
+  },
+  {
+    "id": "thiago-sales",
+    "nome": "Thiago Sales",
+    "foto": "./imagens_jogadores/thiago-sales.jpg"
+  },
+  {
+    "id": "thiago-santos-1",
+    "nome": "Thiago Santos",
+    "foto": "./imagens_jogadores/thiago-santos-1.jpg"
+  },
+  {
+    "id": "thiaguinho",
+    "nome": "Thiaguinho",
+    "foto": "./imagens_jogadores/thiaguinho.jpg"
+  },
+  {
+    "id": "thomas-1",
+    "nome": "Thomás",
+    "foto": "./imagens_jogadores/thomas-1.jpg"
+  },
+  {
+    "id": "toro",
+    "nome": "Toró",
+    "foto": "./imagens_jogadores/toro.jpg"
+  },
+  {
+    "id": "trauco",
+    "nome": "Trauco",
+    "foto": "./imagens_jogadores/trauco.jpg"
+  },
+  {
+    "id": "tuta-1",
+    "nome": "Tuta",
+    "foto": "./imagens_jogadores/tuta-1.jpg"
+  },
+  {
+    "id": "uribe-1",
+    "nome": "Uribe",
+    "foto": "./imagens_jogadores/uribe-1.jpg"
+  },
+  {
+    "id": "vagner-love",
+    "nome": "Vágner Love",
+    "foto": "./imagens_jogadores/vagner-love.jpg"
+  },
+  {
+    "id": "val",
+    "nome": "Val",
+    "foto": "./imagens_jogadores/val.jpg"
+  },
+  {
+    "id": "val-baiano-1",
+    "nome": "Val Baiano",
+    "foto": "./imagens_jogadores/val-baiano-1.jpg"
+  },
+  {
+    "id": "valdson-1",
+    "nome": "Valdson",
+    "foto": "./imagens_jogadores/valdson-1.jpg"
+  },
+  {
+    "id": "valnei-1",
+    "nome": "Valnei",
+    "foto": "./imagens_jogadores/valnei-1.jpg"
+  },
+  {
+    "id": "vampeta-1",
+    "nome": "Vampeta",
+    "foto": "./imagens_jogadores/vampeta-1.jpg"
+  },
+  {
+    "id": "vander-2",
+    "nome": "Vander",
+    "foto": "./imagens_jogadores/vander-2.jpg"
+  },
+  {
+    "id": "vandinho-1",
+    "nome": "Vandinho",
+    "foto": "./imagens_jogadores/vandinho-1.jpg"
+  },
+  {
+    "id": "varela",
+    "nome": "Varela",
+    "foto": "./imagens_jogadores/varela.jpg"
+  },
+  {
+    "id": "victor_hugo_1",
+    "nome": "Victor Hugo",
+    "foto": "./imagens_jogadores/victor_hugo_1.jpg"
+  },
+  {
+    "id": "victor-simoes-1",
+    "nome": "Victor Simões",
+    "foto": "./imagens_jogadores/victor-simoes-1.jpg"
+  },
+  {
+    "id": "vinicius-junior",
+    "nome": "Vinicius Junior",
+    "foto": "./imagens_jogadores/vinicius-junior.jpg"
+  },
+  {
+    "id": "viniciuspacheco",
+    "nome": "Vinicius Pacheco",
+    "foto": "./imagens_jogadores/viniciuspacheco.jpg"
+  },
+  {
+    "id": "vitao",
+    "nome": "Vitão",
+    "foto": "./imagens_jogadores/vitao.jpg"
+  },
+  {
+    "id": "vitinho-1",
+    "nome": "Vitinho",
+    "foto": "./imagens_jogadores/vitinho-1.jpg"
+  },
+  {
+    "id": "vitor-gabriel-1",
+    "nome": "Vitor Gabriel",
+    "foto": "./imagens_jogadores/vitor-gabriel-1.jpg"
+  },
+  {
+    "id": "wallace",
+    "nome": "Wallace",
+    "foto": "./imagens_jogadores/wallace.jpg"
+  },
+  {
+    "id": "wallace_yan",
+    "nome": "Wallace Yan",
+    "foto": "./imagens_jogadores/wallace_yan.jpg"
+  },
+  {
+    "id": "walter-minhoca-1",
+    "nome": "Walter Minhoca",
+    "foto": "./imagens_jogadores/walter-minhoca-1.jpg"
+  },
+  {
+    "id": "wanderley",
+    "nome": "Wanderley",
+    "foto": "./imagens_jogadores/wanderley.jpg"
+  },
+  {
+    "id": "welinton",
+    "nome": "Welinton",
+    "foto": "./imagens_jogadores/welinton.jpg"
+  },
+  {
+    "id": "wellington-bruno",
+    "nome": "Wellington Bruno",
+    "foto": "./imagens_jogadores/wellington-bruno.jpg"
+  },
+  {
+    "id": "wellington-silva",
+    "nome": "Wellington Silva",
+    "foto": "./imagens_jogadores/wellington-silva.jpg"
+  },
+  {
+    "id": "werton",
+    "nome": "Werton",
+    "foto": "./imagens_jogadores/werton.jpg"
+  },
+  {
+    "id": "wesley_1",
+    "nome": "Wesley",
+    "foto": "./imagens_jogadores/wesley_1.jpg"
+  },
+  {
+    "id": "whelliton-1",
+    "nome": "Whelliton",
+    "foto": "./imagens_jogadores/whelliton-1.jpg"
+  },
+  {
+    "id": "willian-arao",
+    "nome": "Willian Arão",
+    "foto": "./imagens_jogadores/willian-arao.jpg"
+  },
+  {
+    "id": "willians",
+    "nome": "Willians",
+    "foto": "./imagens_jogadores/willians.jpg"
+  },
+  {
+    "id": "ze-carlos-1",
+    "nome": "Zé Carlos",
+    "foto": "./imagens_jogadores/ze-carlos-1.jpg"
+  },
+  {
+    "id": "zeroberto",
+    "nome": "Zé Roberto",
+    "foto": "./imagens_jogadores/zeroberto.jpg"
+  }
+]
