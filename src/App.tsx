@@ -47,6 +47,8 @@ export default function App() {
     return `${String(today.getDate()).padStart(2, '0')}/${String(today.getMonth() + 1).padStart(2, '0')}/${today.getFullYear()}`;
   }, []);
 
+  const [gameDateStr, setGameDateStr] = useState<string>(todayStr);
+
   // Countdown timer effect
   useEffect(() => {
     const updateCountdown = () => {
@@ -70,17 +72,23 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  // Local storage keys based on current date
+  // Local storage keys based on selected date
   const keys = useMemo(() => {
-    const safeDate = todayStr.replace(/\//g, '_');
+    const safeDate = gameDateStr.replace(/\//g, '_');
     return {
       stateKey: `flamengodle_state_${safeDate}`,
       statsKey: `flamengodle_stats_v2`
     };
-  }, [todayStr]);
+  }, [gameDateStr]);
 
   // Load database and initialize game state
   useEffect(() => {
+    if (!gameDateStr) return;
+
+    // Reset game state for the newly selected date to prevent flashes of previous games
+    setGuesses([]);
+    setWon(false);
+
     fetch('./database_flamengodle.json')
       .then((res) => {
         if (!res.ok) {
@@ -91,11 +99,11 @@ export default function App() {
       .then((data: Player[]) => {
         setPlayers(data);
 
-        // Select the daily secret player deterministically
-        const secret = getDailyPlayer(data, todayStr);
+        // Select the daily secret player deterministically based on selected date
+        const secret = getDailyPlayer(data, gameDateStr);
         setSecretPlayer(secret);
 
-        // Load today's progress from LocalStorage
+        // Load that day's progress from LocalStorage
         const savedState = localStorage.getItem(keys.stateKey);
         if (savedState) {
           const parsedState: GameState = JSON.parse(savedState);
@@ -123,7 +131,7 @@ export default function App() {
     if (savedStats) {
       setStats(JSON.parse(savedStats));
     }
-  }, [keys, todayStr]);
+  }, [keys, gameDateStr]);
 
   // Handle click outside to close dropdown
   useEffect(() => {
@@ -161,9 +169,9 @@ export default function App() {
 
     setGuesses(newGuesses);
 
-    // Save state to today's localStorage
+    // Save state to the selected date's localStorage
     const newState: GameState = {
-      date: todayStr,
+      date: gameDateStr,
       guesses: newGuesses.map((g) => g.id),
       won: isCorrect,
     };
@@ -188,19 +196,27 @@ export default function App() {
       ? JSON.parse(savedStats)
       : { gamesPlayed: 0, gamesWon: 0, currentStreak: 0, maxStreak: 0 };
 
-    if (currentStats.lastWonDate === todayStr) {
+    if (currentStats.lastWonDate === gameDateStr) {
       return currentStats; // Already recorded today
     }
 
     // Determine streak
-    const yesterday = new Date();
-    yesterday.setDate(yesterday.getDate() - 1);
-    const yesterdayStr = `${String(yesterday.getDate()).padStart(2, '0')}/${String(yesterday.getMonth() + 1).padStart(2, '0')}/${yesterday.getFullYear()}`;
+    let yesterdayStr = '';
+    try {
+      const [d, m, y] = gameDateStr.split('/');
+      const dateObj = new Date(parseInt(y), parseInt(m) - 1, parseInt(d));
+      dateObj.setDate(dateObj.getDate() - 1);
+      yesterdayStr = `${String(dateObj.getDate()).padStart(2, '0')}/${String(dateObj.getMonth() + 1).padStart(2, '0')}/${dateObj.getFullYear()}`;
+    } catch (e) {
+      const yesterday = new Date();
+      yesterday.setDate(yesterday.getDate() - 1);
+      yesterdayStr = `${String(yesterday.getDate()).padStart(2, '0')}/${String(yesterday.getMonth() + 1).padStart(2, '0')}/${yesterday.getFullYear()}`;
+    }
 
     let newStreak = 1;
     if (currentStats.lastWonDate === yesterdayStr) {
       newStreak = currentStats.currentStreak + 1;
-    } else if (currentStats.lastWonDate === todayStr) {
+    } else if (currentStats.lastWonDate === gameDateStr) {
       newStreak = currentStats.currentStreak;
     }
 
@@ -211,7 +227,7 @@ export default function App() {
       gamesWon: currentStats.gamesWon + 1,
       currentStreak: newStreak,
       maxStreak: newMaxStreak,
-      lastWonDate: todayStr,
+      lastWonDate: gameDateStr,
     };
 
     localStorage.setItem(keys.statsKey, JSON.stringify(updated));
@@ -288,10 +304,46 @@ export default function App() {
               </button>
             )}
 
-            <div className="bg-[#1a1a1a] px-3 py-1.5 rounded-lg border border-white/5 text-xs text-zinc-400 font-mono flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5 text-[#d30000]" />
-              {todayStr}
+            <div className="bg-[#1a1a1a] px-3 py-1.5 rounded-lg border border-white/5 text-xs text-zinc-400 font-mono flex items-center gap-1.5 relative hover:border-white/20 transition-all cursor-pointer">
+              <Calendar className="w-3.5 h-3.5 text-[#d30000] shrink-0" />
+              <span className="font-bold text-zinc-300">{gameDateStr}</span>
+              <input
+                type="date"
+                min="2026-07-01"
+                max={new Date().toISOString().split('T')[0]}
+                value={gameDateStr.split('/').reverse().join('-')}
+                onChange={(e) => {
+                  if (e.target.value) {
+                    const [year, month, day] = e.target.value.split('-');
+                    const selectedDate = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+                    const minDate = new Date(2026, 6, 1); // 01/07/2026 (month is 0-indexed)
+                    const maxDate = new Date();
+                    
+                    if (selectedDate >= minDate && selectedDate <= maxDate) {
+                      setGameDateStr(`${day}/${month}/${year}`);
+                    }
+                  }
+                }}
+                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                onClick={(e) => {
+                  try {
+                    (e.target as HTMLInputElement).showPicker();
+                  } catch (err) {
+                    // Fallback for browsers that do not support showPicker
+                  }
+                }}
+              />
             </div>
+
+            {gameDateStr !== todayStr && (
+              <button
+                onClick={() => setGameDateStr(todayStr)}
+                className="px-2.5 py-1.5 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-white/10 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1 shrink-0"
+                title="Voltar para o dia de hoje"
+              >
+                Voltar para Hoje
+              </button>
+            )}
           </div>
         </div>
       </header>
@@ -303,9 +355,12 @@ export default function App() {
           <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white mb-2 uppercase">
             Quem é o <span className="text-[#d30000]">Jogador Secreto</span>?
           </h2>
-          <p className="text-zinc-400 text-xs md:text-sm">
+          <p className="text-zinc-400 text-xs md:text-sm mb-3">
             Digite um jogador histórico ou recente do Flamengo para começar. Use as pistas de cores e setas para acertar!
           </p>
+          <div className="inline-block bg-[#1a1a1a] px-3.5 py-1 rounded-full border border-white/5 text-[10px] text-zinc-500 font-bold tracking-wider uppercase">
+            Base de jogadores atualizada até 15/07/2026
+          </div>
         </div>
 
         {/* Input & Custom Autocomplete search bar */}
@@ -435,23 +490,33 @@ export default function App() {
         )}
       </main>
 
-      {/* Bottom Bar Stats */}
-      <footer className="mt-auto py-6 bg-[#050505] border-t border-white/5 flex justify-center gap-8 md:gap-12 items-center w-full shrink-0 select-none">
-        <div className="flex flex-col items-center">
-          <span className="text-[10px] text-white/40 uppercase tracking-tighter font-semibold">Tentativas</span>
-          <span className="text-xl md:text-2xl font-black italic">{String(guesses.length).padStart(2, '0')}</span>
+      {/* Bottom Bar Stats & Disclaimer Footer */}
+      <footer className="mt-auto bg-[#050505] border-t border-white/5 flex flex-col items-center w-full shrink-0 select-none py-6">
+        {/* Stats Row */}
+        <div className="flex justify-center gap-8 md:gap-12 items-center mb-4">
+          <div className="flex flex-col items-center">
+            <span className="text-[10px] text-white/40 uppercase tracking-tighter font-semibold">Tentativas</span>
+            <span className="text-xl md:text-2xl font-black italic">{String(guesses.length).padStart(2, '0')}</span>
+          </div>
+          <div className="h-8 w-[1px] bg-white/10"></div>
+          <div className="flex flex-col items-center">
+            <span className="text-[10px] text-white/40 uppercase tracking-tighter font-semibold">Taxa de Vitória</span>
+            <span className="text-xl md:text-2xl font-black italic text-[#d30000]">
+              {stats.gamesPlayed > 0 ? Math.round((stats.gamesWon / stats.gamesPlayed) * 100) : 0}%
+            </span>
+          </div>
+          <div className="h-8 w-[1px] bg-white/10"></div>
+          <div className="flex flex-col items-center">
+            <span className="text-[10px] text-white/40 uppercase tracking-tighter font-semibold">Sequência</span>
+            <span className="text-xl md:text-2xl font-black italic">{String(stats.currentStreak).padStart(2, '0')}</span>
+          </div>
         </div>
-        <div className="h-8 w-[1px] bg-white/10"></div>
-        <div className="flex flex-col items-center">
-          <span className="text-[10px] text-white/40 uppercase tracking-tighter font-semibold">Taxa de Vitória</span>
-          <span className="text-xl md:text-2xl font-black italic text-[#d30000]">
-            {stats.gamesPlayed > 0 ? Math.round((stats.gamesWon / stats.gamesPlayed) * 100) : 0}%
-          </span>
-        </div>
-        <div className="h-8 w-[1px] bg-white/10"></div>
-        <div className="flex flex-col items-center">
-          <span className="text-[10px] text-white/40 uppercase tracking-tighter font-semibold">Sequência</span>
-          <span className="text-xl md:text-2xl font-black italic">{String(stats.currentStreak).padStart(2, '0')}</span>
+
+        {/* Disclaimer Text */}
+        <div className="text-center px-4 max-w-2xl border-t border-white/5 pt-4 w-full">
+          <p className="text-xs text-zinc-500 md:text-sm font-medium leading-relaxed">
+            Projeto independente feito de fã para fã. Este jogo não possui nenhum vínculo oficial com o Clube de Regatas do Flamengo.
+          </p>
         </div>
       </footer>
 
@@ -474,6 +539,13 @@ export default function App() {
               <p>
                 Adivinhe o jogador diário secreto do Flamengo! A cada tentativa, as propriedades revelam pistas:
               </p>
+
+              <div className="bg-[#d30000]/10 border border-[#d30000]/30 rounded-lg p-3 text-zinc-300 text-xs flex gap-2">
+                <AlertCircle className="w-5 h-5 text-[#d30000] shrink-0 mt-0.5" />
+                <span>
+                  <strong>Atenção:</strong> A nossa base de dados é restrita a jogadores que estrearam no Flamengo a partir do ano 2000 (neste século) e que tenham completado mais de 10 partidas oficiais pelo clube.
+                </span>
+              </div>
 
               <div className="space-y-2">
                 <div className="flex items-start gap-2.5">
