@@ -800,6 +800,11 @@
     "foto": "./imagens_jogadores/jean-lucas.jpg"
   },
   {
+    "id": "joao-gomes",
+    "nome": "João Gomes",
+    "foto": "./imagens_jogadores/joao-gomes.jpg"
+  },
+  {
     "id": "joao-lucas",
     "nome": "João Lucas",
     "foto": "./imagens_jogadores/joao-lucas.jpg"
