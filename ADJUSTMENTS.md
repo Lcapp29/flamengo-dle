@@ -15,3 +15,6 @@
         "gols": 4,
         "foto": "./imagens_jogadores/joao-gomes.jpg"
     } |
+| 16/07/2026 | Lázaro | Dado equivocado | Posição do jogador estava com informações falhas - Atacante |
+| 16/07/2026 | Matheus | Dado equivocado | Posição do jogador estava com informações falhas - Meio Campo |
+| 16/07/2026 | Rodrigo Muniz | Dado equivocado | Posição do jogador estava com informações falhas - Atacante|

@@ -1,16 +1,5 @@
 [
     {
-        "id": "adrianinho",
-        "nome": "Adrianinho",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1980,
-        "localNascimento": "Jundiaí/SP",
-        "anoEstreia": 2005,
-        "partidas": 15,
-        "gols": 0,
-        "foto": "./imagens_jogadores/adrianinho.jpg"
-    },
-    {
         "id": "adriano",
         "nome": "Adriano",
         "posicao": "Atacante",
@@ -77,17 +66,6 @@
         "foto": "./imagens_jogadores/alecsandro-1.jpg"
     },
     {
-        "id": "alex-1",
-        "nome": "Alex",
-        "posicao": "Atacante",
-        "anoNascimento": 1977,
-        "localNascimento": "Curitiba/PR",
-        "anoEstreia": 2000,
-        "partidas": 12,
-        "gols": 3,
-        "foto": "./imagens_jogadores/alex-1.jpg"
-    },
-    {
         "id": "alex-muralha",
         "nome": "Alex Muralha",
         "posicao": "Goleiro",
@@ -132,17 +110,6 @@
         "foto": "./imagens_jogadores/allan.jpg"
     },
     {
-        "id": "almir-5",
-        "nome": "Almir",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1983,
-        "localNascimento": "João Pessoa/PB",
-        "anoEstreia": 2015,
-        "partidas": 11,
-        "gols": 0,
-        "foto": "./imagens_jogadores/almir-5.jpg"
-    },
-    {
         "id": "alvaro",
         "nome": "Álvaro",
         "posicao": "Zagueiro",
@@ -174,17 +141,6 @@
         "partidas": 74,
         "gols": 3,
         "foto": "./imagens_jogadores/anderson-alves.jpg"
-    },
-    {
-        "id": "anderson-luiz",
-        "nome": "Anderson Luiz",
-        "posicao": "Zagueiro",
-        "anoNascimento": 1983,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2001,
-        "partidas": 12,
-        "gols": 0,
-        "foto": "./imagens_jogadores/anderson-luiz.jpg"
     },
     {
         "id": "anderson-pico",
@@ -286,17 +242,6 @@
         "foto": "./imagens_jogadores/arrascaeta.jpg"
     },
     {
-        "id": "arthur-1",
-        "nome": "Arthur",
-        "posicao": "Atacante",
-        "anoNascimento": 1992,
-        "localNascimento": "Barbalha/CE",
-        "anoEstreia": 2014,
-        "partidas": 12,
-        "gols": 0,
-        "foto": "./imagens_jogadores/arthur-1.jpg"
-    },
-    {
         "id": "arthur-maia",
         "nome": "Arthur Maia",
         "posicao": "Meio Campo",
@@ -328,17 +273,6 @@
         "partidas": 21,
         "gols": 0,
         "foto": "./imagens_jogadores/augusto-recife.jpg"
-    },
-    {
-        "id": "ayrton",
-        "nome": "Ayrton",
-        "posicao": "Lateral Direito",
-        "anoNascimento": 1986,
-        "localNascimento": "Piracicaba/SP",
-        "anoEstreia": 2015,
-        "partidas": 15,
-        "gols": 1,
-        "foto": "./imagens_jogadores/ayrton.jpg"
     },
     {
         "id": "ayrton_lucas",
@@ -374,28 +308,6 @@
         "foto": "./imagens_jogadores/bottinelli.jpg"
     },
     {
-        "id": "bressan",
-        "nome": "Bressan",
-        "posicao": "Zagueiro",
-        "anoNascimento": 1993,
-        "localNascimento": "Caxias do Sul/RS",
-        "anoEstreia": 2015,
-        "partidas": 19,
-        "gols": 1,
-        "foto": "./imagens_jogadores/bressan.jpg"
-    },
-    {
-        "id": "bruninho-1",
-        "nome": "Bruninho",
-        "posicao": "Atacante",
-        "anoNascimento": 1990,
-        "localNascimento": "Sorocaba/SP",
-        "anoEstreia": 2013,
-        "partidas": 14,
-        "gols": 0,
-        "foto": "./imagens_jogadores/bruninho-1.jpg"
-    },
-    {
         "id": "bruno",
         "nome": "Bruno",
         "posicao": "Goleiro",
@@ -405,17 +317,6 @@
         "partidas": 234,
         "gols": 4,
         "foto": "./imagens_jogadores/bruno.jpg"
-    },
-    {
-        "id": "bruno-barbosa",
-        "nome": "Bruno Barbosa",
-        "posicao": "Atacante",
-        "anoNascimento": 1985,
-        "localNascimento": "Niterói/RJ",
-        "anoEstreia": 2005,
-        "partidas": 13,
-        "gols": 3,
-        "foto": "./imagens_jogadores/bruno-barbosa.jpg"
     },
     {
         "id": "bruno-carvalho",
@@ -471,17 +372,6 @@
         "partidas": 90,
         "gols": 3,
         "foto": "./imagens_jogadores/caceres-2.jpg"
-    },
-    {
-        "id": "caio-2",
-        "nome": "Caio",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1980,
-        "localNascimento": "Nova Odessa/SP",
-        "anoEstreia": 2005,
-        "partidas": 14,
-        "gols": 0,
-        "foto": "./imagens_jogadores/caio-2.jpg"
     },
     {
         "id": "camacho",
@@ -605,17 +495,6 @@
         "foto": "./imagens_jogadores/china-1.jpg"
     },
     {
-        "id": "chiquinho-3",
-        "nome": "Chiquinho",
-        "posicao": "Lateral Esquerdo",
-        "anoNascimento": 1989,
-        "localNascimento": "Caxias/MA",
-        "anoEstreia": 2016,
-        "partidas": 18,
-        "gols": 0,
-        "foto": "./imagens_jogadores/chiquinho-3.jpg"
-    },
-    {
         "id": "claiton",
         "nome": "Claiton",
         "posicao": "Meio Campo",
@@ -693,17 +572,6 @@
         "foto": "./imagens_jogadores/da-silva-1.jpg"
     },
     {
-        "id": "daniel_sales_1",
-        "nome": "Daniel Sales",
-        "posicao": "Lateral Direito",
-        "anoNascimento": 2006,
-        "localNascimento": "Jaciara/MT",
-        "anoEstreia": 2024,
-        "partidas": 13,
-        "gols": 0,
-        "foto": "./imagens_jogadores/daniel_sales_1.jpg"
-    },
-    {
         "id": "danilo",
         "nome": "Danilo",
         "posicao": "Zagueiro",
@@ -757,28 +625,6 @@
         "partidas": 99,
         "gols": 31,
         "foto": "./imagens_jogadores/deivid.jpg"
-    },
-    {
-        "id": "denilson",
-        "nome": "Denilson",
-        "posicao": "Atacante",
-        "anoNascimento": 1977,
-        "localNascimento": "São Bernardo do Campo/SP",
-        "anoEstreia": 2000,
-        "partidas": 19,
-        "gols": 4,
-        "foto": "./imagens_jogadores/denilson.jpg"
-    },
-    {
-        "id": "denis-marques",
-        "nome": "Dênis Marques",
-        "posicao": "Atacante",
-        "anoNascimento": 1981,
-        "localNascimento": "Maceió/AL",
-        "anoEstreia": 2009,
-        "partidas": 19,
-        "gols": 6,
-        "foto": "./imagens_jogadores/denis-marques.jpg"
     },
     {
         "id": "diego",
@@ -836,17 +682,6 @@
         "foto": "./imagens_jogadores/diego-silva-1.jpg"
     },
     {
-        "id": "diego-silva",
-        "nome": "Diego Silva",
-        "posicao": "Atacante",
-        "anoNascimento": 1985,
-        "localNascimento": "Foz do Iguaçu/PR",
-        "anoEstreia": 2006,
-        "partidas": 12,
-        "gols": 2,
-        "foto": "./imagens_jogadores/diego-silva.jpg"
-    },
-    {
         "id": "diego-souza",
         "nome": "Diego Souza",
         "posicao": "Meio Campo",
@@ -869,17 +704,6 @@
         "foto": "./imagens_jogadores/diego-tardelli.jpg"
     },
     {
-        "id": "digao-1",
-        "nome": "Digão",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1993,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2011,
-        "partidas": 16,
-        "gols": 0,
-        "foto": "./imagens_jogadores/digao-1.jpg"
-    },
-    {
         "id": "dimba",
         "nome": "Dimba",
         "posicao": "Atacante",
@@ -900,28 +724,6 @@
         "partidas": 25,
         "gols": 6,
         "foto": "./imagens_jogadores/diogo-1.jpg"
-    },
-    {
-        "id": "diogo-2",
-        "nome": "Diogo",
-        "posicao": "Atacante",
-        "anoNascimento": 1987,
-        "localNascimento": "São Paulo/SP",
-        "anoEstreia": 2010,
-        "partidas": 17,
-        "gols": 1,
-        "foto": "./imagens_jogadores/diogo-2.jpg"
-    },
-    {
-        "id": "donatti-1",
-        "nome": "Donatti",
-        "posicao": "Zagueiro",
-        "anoNascimento": 1986,
-        "localNascimento": "Rafaela/ARG",
-        "anoEstreia": 2016,
-        "partidas": 11,
-        "gols": 0,
-        "foto": "./imagens_jogadores/donatti-1.jpg"
     },
     {
         "id": "douglas-silva",
@@ -968,17 +770,6 @@
         "foto": "./imagens_jogadores/edmilson-2.jpg"
     },
     {
-        "id": "edson-5",
-        "nome": "Edson",
-        "posicao": "Lateral Direito",
-        "anoNascimento": 1982,
-        "localNascimento": "São Paulo/SP",
-        "anoEstreia": 2001,
-        "partidas": 17,
-        "gols": 0,
-        "foto": "./imagens_jogadores/edson-5.jpg"
-    },
-    {
         "id": "eduardo-da-silva",
         "nome": "Eduardo da Silva",
         "posicao": "Meio Campo",
@@ -1001,17 +792,6 @@
         "foto": "./imagens_jogadores/egidio.jpg"
     },
     {
-        "id": "elano",
-        "nome": "Elano",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1981,
-        "localNascimento": "Iracemopolis/SP",
-        "anoEstreia": 2014,
-        "partidas": 15,
-        "gols": 3,
-        "foto": "./imagens_jogadores/elano.jpg"
-    },
-    {
         "id": "elias",
         "nome": "Elias",
         "posicao": "Meio Campo",
@@ -1021,17 +801,6 @@
         "partidas": 56,
         "gols": 10,
         "foto": "./imagens_jogadores/elias.jpg"
-    },
-    {
-        "id": "elton",
-        "nome": "Elton",
-        "posicao": "Atacante",
-        "anoNascimento": 1985,
-        "localNascimento": "Iramaia/BA",
-        "anoEstreia": 2014,
-        "partidas": 13,
-        "gols": 2,
-        "foto": "./imagens_jogadores/elton.jpg"
     },
     {
         "id": "emerson-2",
@@ -1076,17 +845,6 @@
         "partidas": 28,
         "gols": 0,
         "foto": "./imagens_jogadores/erick-flores.jpg"
-    },
-    {
-        "id": "evandro",
-        "nome": "Evandro",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1978,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2002,
-        "partidas": 11,
-        "gols": 0,
-        "foto": "./imagens_jogadores/evandro.jpg"
     },
     {
         "id": "everton-1",
@@ -1175,17 +933,6 @@
         "partidas": 50,
         "gols": 0,
         "foto": "./imagens_jogadores/fabinho-1.jpg"
-    },
-    {
-        "id": "fabio-1",
-        "nome": "Fabio",
-        "posicao": "Lateral Direito",
-        "anoNascimento": 1984,
-        "localNascimento": "Recife/PE",
-        "anoEstreia": 2005,
-        "partidas": 16,
-        "gols": 1,
-        "foto": "./imagens_jogadores/fabio-1.jpg"
     },
     {
         "id": "fabioluciano",
@@ -1320,17 +1067,6 @@
         "foto": "./imagens_jogadores/fernando-baiano.jpg"
     },
     {
-        "id": "fernando-diniz",
-        "nome": "Fernando Diniz",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1974,
-        "localNascimento": "Patos de Minas/MG",
-        "anoEstreia": 2003,
-        "partidas": 12,
-        "gols": 1,
-        "foto": "./imagens_jogadores/fernando-diniz.jpg"
-    },
-    {
         "id": "fierro",
         "nome": "Fierro",
         "posicao": "Meio Campo",
@@ -1351,17 +1087,6 @@
         "partidas": 176,
         "gols": 4,
         "foto": "./imagens_jogadores/filipe_luis_1.jpg"
-    },
-    {
-        "id": "flavio-4",
-        "nome": "Flavio",
-        "posicao": "Atacante",
-        "anoNascimento": 1978,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2004,
-        "partidas": 10,
-        "gols": 2,
-        "foto": "./imagens_jogadores/flavio-4.jpg"
     },
     {
         "id": "flavio-tanajura",
@@ -1419,17 +1144,6 @@
         "foto": "./imagens_jogadores/gabriel-batista.jpg"
     },
     {
-        "id": "gabriel_noga",
-        "nome": "Gabriel Noga",
-        "posicao": "Zagueiro",
-        "anoNascimento": 2002,
-        "localNascimento": "Volta Redonda/RJ",
-        "anoEstreia": 2020,
-        "partidas": 17,
-        "gols": 0,
-        "foto": "./imagens_jogadores/gabriel_noga.jpg"
-    },
-    {
         "id": "gamarra",
         "nome": "Gamarra",
         "posicao": "Zagueiro",
@@ -1474,17 +1188,6 @@
         "foto": "./imagens_jogadores/geuvanio.jpg"
     },
     {
-        "id": "gilmar",
-        "nome": "Gilmar",
-        "posicao": "Zagueiro",
-        "anoNascimento": 1971,
-        "localNascimento": "São Paulo/SP",
-        "anoEstreia": 2001,
-        "partidas": 12,
-        "gols": 0,
-        "foto": "./imagens_jogadores/gilmar.jpg"
-    },
-    {
         "id": "gomes",
         "nome": "Gomes",
         "posicao": "Meio Campo",
@@ -1516,28 +1219,6 @@
         "partidas": 115,
         "gols": 43,
         "foto": "./imagens_jogadores/guerrero.jpg"
-    },
-    {
-        "id": "guilherme_gomes",
-        "nome": "Guilherme Gomes",
-        "posicao": "Meio Campo",
-        "anoNascimento": 2006,
-        "localNascimento": "Mandaguari/PR",
-        "anoEstreia": 2024,
-        "partidas": 12,
-        "gols": 5,
-        "foto": "./imagens_jogadores/guilherme_gomes.jpg"
-    },
-    {
-        "id": "gustavo-2",
-        "nome": "Gustavo",
-        "posicao": "Zagueiro",
-        "anoNascimento": 1986,
-        "localNascimento": "Attilio Vivacqua/ES",
-        "anoEstreia": 2011,
-        "partidas": 12,
-        "gols": 0,
-        "foto": "./imagens_jogadores/gustavo-2.jpg"
     },
     {
         "id": "gustavo-henrique",
@@ -1582,17 +1263,6 @@
         "partidas": 87,
         "gols": 45,
         "foto": "./imagens_jogadores/hernane-1.jpg"
-    },
-    {
-        "id": "hugo-2",
-        "nome": "Hugo",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1980,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2002,
-        "partidas": 14,
-        "gols": 2,
-        "foto": "./imagens_jogadores/hugo-2.jpg"
     },
     {
         "id": "hugo_moura",
@@ -1650,17 +1320,6 @@
         "foto": "./imagens_jogadores/igor_jesus.jpg"
     },
     {
-        "id": "igor-sartori",
-        "nome": "Igor Sartori",
-        "posicao": "Atacante",
-        "anoNascimento": 1993,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2013,
-        "partidas": 11,
-        "gols": 0,
-        "foto": "./imagens_jogadores/igor-sartori.jpg"
-    },
-    {
         "id": "irineu-1",
         "nome": "Irineu",
         "posicao": "Zagueiro",
@@ -1683,17 +1342,6 @@
         "foto": "./imagens_jogadores/isla.jpg"
     },
     {
-        "id": "jackson-1",
-        "nome": "Jackson",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1981,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2000,
-        "partidas": 16,
-        "gols": 2,
-        "foto": "./imagens_jogadores/jackson-1.jpg"
-    },
-    {
         "id": "jael",
         "nome": "Jael",
         "posicao": "Atacante",
@@ -1714,17 +1362,6 @@
         "partidas": 88,
         "gols": 2,
         "foto": "./imagens_jogadores/jailton-1.jpg"
-    },
-    {
-        "id": "jaja-2",
-        "nome": "Jajá",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1995,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2015,
-        "partidas": 14,
-        "gols": 0,
-        "foto": "./imagens_jogadores/jaja-2.jpg"
     },
     {
         "id": "jean",
@@ -1771,17 +1408,6 @@
         "foto": "./imagens_jogadores/joao-gomes.jpg"
     },
     {
-        "id": "joao-lucas",
-        "nome": "João Lucas",
-        "posicao": "Lateral Direito",
-        "anoNascimento": 1998,
-        "localNascimento": "Belo Horizonte/MG",
-        "anoEstreia": 2019,
-        "partidas": 19,
-        "gols": 1,
-        "foto": "./imagens_jogadores/joao-lucas.jpg"
-    },
-    {
         "id": "joao-paulo-2",
         "nome": "João Paulo",
         "posicao": "Lateral Esquerdo",
@@ -1791,17 +1417,6 @@
         "partidas": 97,
         "gols": 4,
         "foto": "./imagens_jogadores/joao-paulo-2.jpg"
-    },
-    {
-        "id": "joao_victor",
-        "nome": "João Victor",
-        "posicao": "Zagueiro",
-        "anoNascimento": 2007,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2024,
-        "partidas": 18,
-        "gols": 0,
-        "foto": "./imagens_jogadores/joao_victor.jpg"
     },
     {
         "id": "jonas",
@@ -1846,17 +1461,6 @@
         "partidas": 52,
         "gols": 8,
         "foto": "./imagens_jogadores/jorginho_1.jpg"
-    },
-    {
-        "id": "josafa",
-        "nome": "Josafá",
-        "posicao": "Atacante",
-        "anoNascimento": 1980,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2005,
-        "partidas": 11,
-        "gols": 2,
-        "foto": "./imagens_jogadores/josafa.jpg"
     },
     {
         "id": "josiel-1",
@@ -1958,17 +1562,6 @@
         "foto": "./imagens_jogadores/kayke-1.jpg"
     },
     {
-        "id": "kenedy",
-        "nome": "Kenedy",
-        "posicao": "Atacante",
-        "anoNascimento": 1996,
-        "localNascimento": "Santa Rita do Sapucaí/MG",
-        "anoEstreia": 2021,
-        "partidas": 17,
-        "gols": 1,
-        "foto": "./imagens_jogadores/kenedy.jpg"
-    },
-    {
         "id": "kleberson-1",
         "nome": "Kléberson",
         "posicao": "Meio Campo",
@@ -1982,7 +1575,7 @@
     {
         "id": "lazaro",
         "nome": "Lázaro",
-        "posicao": "Primeiro Jogo: 27/09/2020",
+        "posicao": "Atacante",
         "anoNascimento": 2002,
         "localNascimento": "Belo Horizonte/MG",
         "anoEstreia": 2020,
@@ -2002,39 +1595,6 @@
         "foto": "./imagens_jogadores/leandro-damiao.jpg"
     },
     {
-        "id": "leandro-salino-1",
-        "nome": "Leandro Salino",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1985,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2007,
-        "partidas": 11,
-        "gols": 0,
-        "foto": "./imagens_jogadores/leandro-salino-1.jpg"
-    },
-    {
-        "id": "lenon",
-        "nome": "Lenon",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1990,
-        "localNascimento": "São Paulo/SP",
-        "anoEstreia": 2009,
-        "partidas": 18,
-        "gols": 0,
-        "foto": "./imagens_jogadores/lenon.jpg"
-    },
-    {
-        "id": "leo-4",
-        "nome": "Léo",
-        "posicao": "Lateral Direito",
-        "anoNascimento": 1991,
-        "localNascimento": "Salvador/BA",
-        "anoEstreia": 2014,
-        "partidas": 11,
-        "gols": 2,
-        "foto": "./imagens_jogadores/leo-4.jpg"
-    },
-    {
         "id": "leo-duarte-1",
         "nome": "Leo Duarte",
         "posicao": "Zagueiro",
@@ -2044,17 +1604,6 @@
         "partidas": 94,
         "gols": 2,
         "foto": "./imagens_jogadores/leo-duarte-1.jpg"
-    },
-    {
-        "id": "leo-lima-1",
-        "nome": "Léo Lima",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1982,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2007,
-        "partidas": 13,
-        "gols": 1,
-        "foto": "./imagens_jogadores/leo-lima-1.jpg"
     },
     {
         "id": "leo-medeiros-1",
@@ -2310,17 +1859,6 @@
         "foto": "./imagens_jogadores/marcelo-3.jpg"
     },
     {
-        "id": "marcelo",
-        "nome": "Marcelo",
-        "posicao": "Atacante",
-        "anoNascimento": 1980,
-        "localNascimento": "Ribeirão Preto/SP",
-        "anoEstreia": 2004,
-        "partidas": 11,
-        "gols": 1,
-        "foto": "./imagens_jogadores/marcelo.jpg"
-    },
-    {
         "id": "marcelo-cirino",
         "nome": "Marcelo Cirino",
         "posicao": "Atacante",
@@ -2376,17 +1914,6 @@
         "foto": "./imagens_jogadores/marcio-araujo-1.jpg"
     },
     {
-        "id": "marcos-denner-1",
-        "nome": "Marcos Denner",
-        "posicao": "Atacante",
-        "anoNascimento": 1976,
-        "localNascimento": "Duque de Caxias/RJ",
-        "anoEstreia": 2005,
-        "partidas": 13,
-        "gols": 2,
-        "foto": "./imagens_jogadores/marcos-denner-1.jpg"
-    },
-    {
         "id": "marcos-gonzales",
         "nome": "Marcos Gonzales",
         "posicao": "Zagueiro",
@@ -2409,28 +1936,6 @@
         "foto": "./imagens_jogadores/marinho_1.jpg"
     },
     {
-        "id": "marllon",
-        "nome": "Marllon",
-        "posicao": "Zagueiro",
-        "anoNascimento": 1992,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2012,
-        "partidas": 17,
-        "gols": 0,
-        "foto": "./imagens_jogadores/marllon.jpg"
-    },
-    {
-        "id": "marlon",
-        "nome": "Marlon",
-        "posicao": "Zagueiro",
-        "anoNascimento": 1986,
-        "localNascimento": "São Gonçalo/RJ",
-        "anoEstreia": 2006,
-        "partidas": 11,
-        "gols": 0,
-        "foto": "./imagens_jogadores/marlon.jpg"
-    },
-    {
         "id": "marlos-moreno",
         "nome": "Marlos Moreno",
         "posicao": "Atacante",
@@ -2442,42 +1947,9 @@
         "foto": "./imagens_jogadores/marlos-moreno.jpg"
     },
     {
-        "id": "marquinhos-2",
-        "nome": "Marquinhos",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1989,
-        "localNascimento": "Prado/BA",
-        "anoEstreia": 2010,
-        "partidas": 15,
-        "gols": 1,
-        "foto": "./imagens_jogadores/marquinhos-2.jpg"
-    },
-    {
-        "id": "marquinhos",
-        "nome": "Marquinhos",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1981,
-        "localNascimento": "Florianópolis/SC",
-        "anoEstreia": 2002,
-        "partidas": 10,
-        "gols": 0,
-        "foto": "./imagens_jogadores/marquinhos.jpg"
-    },
-    {
-        "id": "mateusao_1",
-        "nome": "Mateusão",
-        "posicao": "Atacante",
-        "anoNascimento": 2004,
-        "localNascimento": "Três Marias/MG",
-        "anoEstreia": 2021,
-        "partidas": 18,
-        "gols": 0,
-        "foto": "./imagens_jogadores/mateusao_1.jpg"
-    },
-    {
         "id": "matheus-1",
         "nome": "Matheus",
-        "posicao": "Primeiro Jogo: 03/02/2012",
+        "posicao": "Meio Campo",
         "anoNascimento": 1994,
         "localNascimento": "Rio de Janeiro/RJ",
         "anoEstreia": 2012,
@@ -2563,17 +2035,6 @@
         "foto": "./imagens_jogadores/matias_vina.jpg"
     },
     {
-        "id": "max_1",
-        "nome": "Max",
-        "posicao": "Meio Campo",
-        "anoNascimento": 2001,
-        "localNascimento": "Juiz de Fora/MG",
-        "anoEstreia": 2021,
-        "partidas": 14,
-        "gols": 1,
-        "foto": "./imagens_jogadores/max_1.jpg"
-    },
-    {
         "id": "maxi",
         "nome": "Maxi",
         "posicao": "Atacante",
@@ -2596,28 +2057,6 @@
         "foto": "./imagens_jogadores/michael.jpg"
     },
     {
-        "id": "michael-1",
-        "nome": "Michael",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1983,
-        "localNascimento": "São Caetano do Sul/SP",
-        "anoEstreia": 2010,
-        "partidas": 17,
-        "gols": 2,
-        "foto": "./imagens_jogadores/michael-1.jpg"
-    },
-    {
-        "id": "moises-1",
-        "nome": "Moises",
-        "posicao": "Zagueiro",
-        "anoNascimento": 1979,
-        "localNascimento": "Nanuque/MG",
-        "anoEstreia": 2007,
-        "partidas": 16,
-        "gols": 0,
-        "foto": "./imagens_jogadores/moises-1.jpg"
-    },
-    {
         "id": "mozart-1",
         "nome": "Mozart",
         "posicao": "Meio Campo",
@@ -2638,28 +2077,6 @@
         "partidas": 68,
         "gols": 0,
         "foto": "./imagens_jogadores/muralha-1.jpg"
-    },
-    {
-        "id": "natan",
-        "nome": "Natan",
-        "posicao": "Zagueiro",
-        "anoNascimento": 2001,
-        "localNascimento": "Itapecerica da Serra /SP",
-        "anoEstreia": 2020,
-        "partidas": 18,
-        "gols": 1,
-        "foto": "./imagens_jogadores/natan.jpg"
-    },
-    {
-        "id": "negreiros-1",
-        "nome": "Negreiros",
-        "posicao": "Atacante",
-        "anoNascimento": 1981,
-        "localNascimento": "Campina Grande/PB",
-        "anoEstreia": 2004,
-        "partidas": 15,
-        "gols": 4,
-        "foto": "./imagens_jogadores/negreiros-1.jpg"
     },
     {
         "id": "negueba",
@@ -2783,17 +2200,6 @@
         "foto": "./imagens_jogadores/pedro.jpg"
     },
     {
-        "id": "pedro-rocha",
-        "nome": "Pedro Rocha",
-        "posicao": "Atacante",
-        "anoNascimento": 1994,
-        "localNascimento": "Vila Velha/ES",
-        "anoEstreia": 2020,
-        "partidas": 11,
-        "gols": 1,
-        "foto": "./imagens_jogadores/pedro-rocha.jpg"
-    },
-    {
         "id": "pepe",
         "nome": "Pepê",
         "posicao": "Meio Campo",
@@ -2871,17 +2277,6 @@
         "foto": "./imagens_jogadores/rafael-galhardo.jpg"
     },
     {
-        "id": "rafael-gaucho-1",
-        "nome": "Rafael Gaúcho",
-        "posicao": "Atacante",
-        "anoNascimento": 1982,
-        "localNascimento": "Porto Alegre/RS",
-        "anoEstreia": 2004,
-        "partidas": 17,
-        "gols": 3,
-        "foto": "./imagens_jogadores/rafael-gaucho-1.jpg"
-    },
-    {
         "id": "rafael-vaz",
         "nome": "Rafael Vaz",
         "posicao": "Zagueiro",
@@ -2946,39 +2341,6 @@
         "partidas": 39,
         "gols": 0,
         "foto": "./imagens_jogadores/ramon_1.jpg"
-    },
-    {
-        "id": "recife",
-        "nome": "Recife",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1994,
-        "localNascimento": "Recife/PE",
-        "anoEstreia": 2013,
-        "partidas": 11,
-        "gols": 0,
-        "foto": "./imagens_jogadores/recife.jpg"
-    },
-    {
-        "id": "reginaldo-araujo",
-        "nome": "Reginaldo Araújo",
-        "posicao": "Lateral Direito",
-        "anoNascimento": 1977,
-        "localNascimento": "Presidente Prudente/SP",
-        "anoEstreia": 2004,
-        "partidas": 19,
-        "gols": 0,
-        "foto": "./imagens_jogadores/reginaldo-araujo.jpg"
-    },
-    {
-        "id": "reinier",
-        "nome": "Reinier",
-        "posicao": "Meio Campo",
-        "anoNascimento": 2002,
-        "localNascimento": "Brasilia/DF",
-        "anoEstreia": 2019,
-        "partidas": 15,
-        "gols": 6,
-        "foto": "./imagens_jogadores/reinier.jpg"
     },
     {
         "id": "renato-abreu",
@@ -3058,17 +2420,6 @@
         "foto": "./imagens_jogadores/rhodolfo.jpg"
     },
     {
-        "id": "ricardo-lopes-1",
-        "nome": "Ricardo Lopes",
-        "posicao": "Lateral Direito",
-        "anoNascimento": 1977,
-        "localNascimento": "Jaú/SP",
-        "anoEstreia": 2005,
-        "partidas": 11,
-        "gols": 1,
-        "foto": "./imagens_jogadores/ricardo-lopes-1.jpg"
-    },
-    {
         "id": "robson-2",
         "nome": "Robson",
         "posicao": "Lateral Direito",
@@ -3089,17 +2440,6 @@
         "partidas": 229,
         "gols": 9,
         "foto": "./imagens_jogadores/rodinei.jpg"
-    },
-    {
-        "id": "rodolfo-1",
-        "nome": "Rodolfo",
-        "posicao": "Meio Campo",
-        "anoNascimento": 2013,
-        "localNascimento": "Mesquita/RJ",
-        "anoEstreia": 2013,
-        "partidas": 18,
-        "gols": 1,
-        "foto": "./imagens_jogadores/rodolfo-1.jpg"
     },
     {
         "id": "rodrigo-alvim",
@@ -3137,24 +2477,13 @@
     {
         "id": "rodrigo-muniz",
         "nome": "Rodrigo Muniz",
-        "posicao": "Primeiro Jogo: 18/01/2020",
+        "posicao": "Atacante",
         "anoNascimento": 2001,
         "localNascimento": "São Domingos do Prata /MG",
         "anoEstreia": 2020,
         "partidas": 32,
         "gols": 10,
         "foto": "./imagens_jogadores/rodrigo-muniz.jpg"
-    },
-    {
-        "id": "rodrigo-silva-1",
-        "nome": "Rodrigo Silva",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1981,
-        "localNascimento": "Imperatriz/MA",
-        "anoEstreia": 2006,
-        "partidas": 10,
-        "gols": 0,
-        "foto": "./imagens_jogadores/rodrigo-silva-1.jpg"
     },
     {
         "id": "roger-1",
@@ -3166,17 +2495,6 @@
         "partidas": 63,
         "gols": 11,
         "foto": "./imagens_jogadores/roger-1.jpg"
-    },
-    {
-        "id": "roger-2",
-        "nome": "Roger",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1978,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2007,
-        "partidas": 15,
-        "gols": 2,
-        "foto": "./imagens_jogadores/roger-2.jpg"
     },
     {
         "id": "roma-1",
@@ -3344,28 +2662,6 @@
         "foto": "./imagens_jogadores/thiago.jpg"
     },
     {
-        "id": "thiago-campos-1",
-        "nome": "Thiago Campos",
-        "posicao": "Zagueiro",
-        "anoNascimento": 1984,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2004,
-        "partidas": 18,
-        "gols": 1,
-        "foto": "./imagens_jogadores/thiago-campos-1.jpg"
-    },
-    {
-        "id": "thiago-gosling-1",
-        "nome": "Thiago Gosling",
-        "posicao": "Zagueiro",
-        "anoNascimento": 1979,
-        "localNascimento": "Belo Horizonte/MG",
-        "anoEstreia": 2007,
-        "partidas": 12,
-        "gols": 0,
-        "foto": "./imagens_jogadores/thiago-gosling-1.jpg"
-    },
-    {
         "id": "thiago-maia-1",
         "nome": "Thiago Maia",
         "posicao": "Meio Campo",
@@ -3386,39 +2682,6 @@
         "partidas": 57,
         "gols": 21,
         "foto": "./imagens_jogadores/thiago-neves.jpg"
-    },
-    {
-        "id": "thiago-sales",
-        "nome": "Thiago Sales",
-        "posicao": "Zagueiro",
-        "anoNascimento": 1987,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2007,
-        "partidas": 15,
-        "gols": 5,
-        "foto": "./imagens_jogadores/thiago-sales.jpg"
-    },
-    {
-        "id": "thiago-santos-1",
-        "nome": "Thiago Santos",
-        "posicao": "Atacante",
-        "anoNascimento": 1995,
-        "localNascimento": "Mari/PB",
-        "anoEstreia": 2015,
-        "partidas": 13,
-        "gols": 1,
-        "foto": "./imagens_jogadores/thiago-santos-1.jpg"
-    },
-    {
-        "id": "thiaguinho",
-        "nome": "Thiaguinho",
-        "posicao": "Atacante",
-        "anoNascimento": 2001,
-        "localNascimento": "Recife/PE",
-        "anoEstreia": 2021,
-        "partidas": 15,
-        "gols": 2,
-        "foto": "./imagens_jogadores/thiaguinho.jpg"
     },
     {
         "id": "thomas-1",
@@ -3487,83 +2750,6 @@
         "foto": "./imagens_jogadores/vagner-love.jpg"
     },
     {
-        "id": "val",
-        "nome": "Val",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1983,
-        "localNascimento": "Natal/RN",
-        "anoEstreia": 2013,
-        "partidas": 18,
-        "gols": 0,
-        "foto": "./imagens_jogadores/val.jpg"
-    },
-    {
-        "id": "val-baiano-1",
-        "nome": "Val Baiano",
-        "posicao": "Atacante",
-        "anoNascimento": 1981,
-        "localNascimento": "Jequié/BA",
-        "anoEstreia": 2010,
-        "partidas": 18,
-        "gols": 3,
-        "foto": "./imagens_jogadores/val-baiano-1.jpg"
-    },
-    {
-        "id": "valdson-1",
-        "nome": "Valdson",
-        "posicao": "Zagueiro",
-        "anoNascimento": 1975,
-        "localNascimento": "Propria/SE",
-        "anoEstreia": 2002,
-        "partidas": 17,
-        "gols": 0,
-        "foto": "./imagens_jogadores/valdson-1.jpg"
-    },
-    {
-        "id": "valnei-1",
-        "nome": "Valnei",
-        "posicao": "Zagueiro",
-        "anoNascimento": 1981,
-        "localNascimento": "Salvador/BA",
-        "anoEstreia": 2002,
-        "partidas": 19,
-        "gols": 0,
-        "foto": "./imagens_jogadores/valnei-1.jpg"
-    },
-    {
-        "id": "vampeta-1",
-        "nome": "Vampeta",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1974,
-        "localNascimento": "Nazaré das Farinhas/BA",
-        "anoEstreia": 2001,
-        "partidas": 16,
-        "gols": 1,
-        "foto": "./imagens_jogadores/vampeta-1.jpg"
-    },
-    {
-        "id": "vander-2",
-        "nome": "Vander",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1990,
-        "localNascimento": "Salvador/BA",
-        "anoEstreia": 2011,
-        "partidas": 10,
-        "gols": 2,
-        "foto": "./imagens_jogadores/vander-2.jpg"
-    },
-    {
-        "id": "vandinho-1",
-        "nome": "Vandinho",
-        "posicao": "Atacante",
-        "anoNascimento": 1986,
-        "localNascimento": "Londrina/PR",
-        "anoEstreia": 2008,
-        "partidas": 10,
-        "gols": 2,
-        "foto": "./imagens_jogadores/vandinho-1.jpg"
-    },
-    {
         "id": "varela",
         "nome": "Varela",
         "posicao": "Lateral Direito",
@@ -3586,17 +2772,6 @@
         "foto": "./imagens_jogadores/victor_hugo_1.jpg"
     },
     {
-        "id": "victor-simoes-1",
-        "nome": "Victor Simões",
-        "posicao": "Atacante",
-        "anoNascimento": 1981,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2001,
-        "partidas": 14,
-        "gols": 2,
-        "foto": "./imagens_jogadores/victor-simoes-1.jpg"
-    },
-    {
         "id": "vinicius-junior",
         "nome": "Vinicius Junior",
         "posicao": "Atacante",
@@ -3617,17 +2792,6 @@
         "partidas": 88,
         "gols": 6,
         "foto": "./imagens_jogadores/viniciuspacheco.jpg"
-    },
-    {
-        "id": "vitao",
-        "nome": "Vitão",
-        "posicao": "Zagueiro",
-        "anoNascimento": 2000,
-        "localNascimento": "Jacarezinho/PR",
-        "anoEstreia": 2026,
-        "partidas": 17,
-        "gols": 0,
-        "foto": "./imagens_jogadores/vitao.jpg"
     },
     {
         "id": "vitinho-1",
@@ -3674,17 +2838,6 @@
         "foto": "./imagens_jogadores/wallace_yan.jpg"
     },
     {
-        "id": "walter-minhoca-1",
-        "nome": "Walter Minhoca",
-        "posicao": "Meio Campo",
-        "anoNascimento": 1982,
-        "localNascimento": "Betim/MG",
-        "anoEstreia": 2006,
-        "partidas": 19,
-        "gols": 0,
-        "foto": "./imagens_jogadores/walter-minhoca-1.jpg"
-    },
-    {
         "id": "wanderley",
         "nome": "Wanderley",
         "posicao": "Atacante",
@@ -3707,17 +2860,6 @@
         "foto": "./imagens_jogadores/welinton.jpg"
     },
     {
-        "id": "wellington-bruno",
-        "nome": "Wellington Bruno",
-        "posicao": "Atacante",
-        "anoNascimento": 1986,
-        "localNascimento": "Guarulhos/SP",
-        "anoEstreia": 2012,
-        "partidas": 11,
-        "gols": 0,
-        "foto": "./imagens_jogadores/wellington-bruno.jpg"
-    },
-    {
         "id": "wellington-silva",
         "nome": "Wellington Silva",
         "posicao": "Lateral Direito",
@@ -3729,17 +2871,6 @@
         "foto": "./imagens_jogadores/wellington-silva.jpg"
     },
     {
-        "id": "werton",
-        "nome": "Werton",
-        "posicao": "Atacante",
-        "anoNascimento": 2003,
-        "localNascimento": "Benjamin Constant/AM",
-        "anoEstreia": 2021,
-        "partidas": 12,
-        "gols": 1,
-        "foto": "./imagens_jogadores/werton.jpg"
-    },
-    {
         "id": "wesley_1",
         "nome": "Wesley",
         "posicao": "Lateral Direito",
@@ -3749,17 +2880,6 @@
         "partidas": 139,
         "gols": 4,
         "foto": "./imagens_jogadores/wesley_1.jpg"
-    },
-    {
-        "id": "whelliton-1",
-        "nome": "Whelliton",
-        "posicao": "Atacante",
-        "anoNascimento": 1972,
-        "localNascimento": "Santos/SP",
-        "anoEstreia": 2004,
-        "partidas": 19,
-        "gols": 3,
-        "foto": "./imagens_jogadores/whelliton-1.jpg"
     },
     {
         "id": "willian-arao",

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Player, Stats } from '../types';
+import { Player, Stats, GuessType } from '../types';
 import { comparePlayers } from '../utils/gameLogic';
 import { Share2, Check, Trophy, Flame, Calendar } from 'lucide-react';
 
@@ -7,7 +7,7 @@ interface StatsModalProps {
   isOpen: boolean;
   onClose: () => void;
   secretPlayer: Player;
-  guesses: Player[];
+  guesses: GuessType[];
   attempts: number;
   stats: Stats;
 }
@@ -53,25 +53,33 @@ export const StatsModal: React.FC<StatsModalProps> = ({
 
     const grid = guesses
       .map((g) => {
+        if ('isHint' in g) {
+          return '💡'; // Represent hint in the share grid
+        }
+        
         const c = comparePlayers(g, secretPlayer);
         const emo1 = g.id === secretPlayer.id ? '🟩' : '⬛';
         const emo2 = c.position.status === 'correct' ? '🟩' : '🟥';
 
         const emo3 = c.anoNascimento.status === 'correct' ? '🟩' : c.anoNascimento.status === 'close' ? '🟨' : '🟥';
         const arrow3 = c.anoNascimento.status === 'correct' ? '' : c.anoNascimento.direction === 'up' ? '⬆️' : '⬇️';
+        const disp3 = arrow3 ? arrow3 : emo3;
 
         const emo4 = c.anoEstreia.status === 'correct' ? '🟩' : c.anoEstreia.status === 'close' ? '🟨' : '🟥';
         const realArrow4 = c.anoEstreia.status === 'correct' ? '' : c.anoEstreia.direction === 'up' ? '⬆️' : '⬇️';
+        const disp4 = realArrow4 ? realArrow4 : emo4;
 
         const emo5 = c.region.status === 'correct' ? '🟩' : '🟥';
 
         const emo6 = c.partidas.status === 'correct' ? '🟩' : c.partidas.status === 'close' ? '🟨' : '🟥';
         const arrow6 = c.partidas.status === 'correct' ? '' : c.partidas.direction === 'up' ? '⬆️' : '⬇️';
+        const disp6 = arrow6 ? arrow6 : emo6;
 
         const emo7 = c.gols.status === 'correct' ? '🟩' : c.gols.status === 'close' ? '🟨' : '🟥';
         const arrow7 = c.gols.status === 'correct' ? '' : c.gols.direction === 'up' ? '⬆️' : '⬇️';
+        const disp7 = arrow7 ? arrow7 : emo7;
 
-        return `${emo1}${emo2}${emo3}${arrow3}${emo4}${realArrow4}${emo5}${emo6}${arrow6}${emo7}${arrow7}`;
+        return `${emo1}${emo2}${disp3}${disp4}${emo5}${disp6}${disp7}`;
       })
       .join('\n');
 
