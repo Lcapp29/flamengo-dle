@@ -3,6 +3,7 @@ import { Player, AutocompletePlayer, GameState, Stats, GuessType, Hint } from '.
 import { getDailyPlayer, getRegion } from './utils/gameLogic';
 import { GuessRow } from './components/GuessRow';
 import { StatsModal } from './components/StatsModal';
+import { initGA, trackPageView, trackEvent } from './analytics';
 import {
   Search,
   Flame,
@@ -16,6 +17,44 @@ import {
 } from 'lucide-react';
 
 export default function App() {
+  // Inicialização do Google Analytics 4 (GA4)
+  useEffect(() => {
+    initGA();
+  }, []);
+
+  // Rastreamento de Rota (Simulado para a SPA)
+  useEffect(() => {
+    const handleLocationChange = () => {
+      trackPageView(window.location.pathname + window.location.search);
+    };
+
+    // Registrar no load inicial
+    handleLocationChange();
+
+    // Monitorar caso usem History API (popstate para voltar/avançar no navegador)
+    window.addEventListener('popstate', handleLocationChange);
+    
+    // Monitorar caso usem pushState/replaceState
+    const originalPushState = window.history.pushState;
+    const originalReplaceState = window.history.replaceState;
+    
+    window.history.pushState = function(...args) {
+      originalPushState.apply(this, args);
+      handleLocationChange();
+    };
+    
+    window.history.replaceState = function(...args) {
+      originalReplaceState.apply(this, args);
+      handleLocationChange();
+    };
+
+    return () => {
+      window.removeEventListener('popstate', handleLocationChange);
+      window.history.pushState = originalPushState;
+      window.history.replaceState = originalReplaceState;
+    };
+  }, []);
+
   // Clear old cache for V3
   useEffect(() => {
     const currentVersion = 'v3';
@@ -202,6 +241,10 @@ export default function App() {
 
     if (isCorrect) {
       setWon(true);
+      
+      // Track victory event in GA4
+      trackEvent('Game', 'Win', `Date: ${gameDateStr}`, newGuesses.length);
+
       // Update and save general game statistics
       const updatedStats = updateStatsOnWin();
       setStats(updatedStats);
@@ -638,7 +681,7 @@ export default function App() {
               <div className="bg-[#d30000]/10 border border-[#d30000]/30 rounded-lg p-3 text-zinc-300 text-xs flex gap-2">
                 <AlertCircle className="w-5 h-5 text-[#d30000] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Atenção:</strong> A nossa base de dados é restrita a jogadores que estrearam no Flamengo a partir do ano 2000 (neste século) e que tenham completado mais de 20 partidas oficiais pelo clube.
+                  <strong>Atenção:</strong> A nossa base de dados é restrita a jogadores que estrearam no Flamengo a partir do ano 2000 (neste século) e que tenham completado mais de 10 partidas oficiais pelo clube.
                 </span>
               </div>
 

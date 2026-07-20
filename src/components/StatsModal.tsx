@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Player, Stats, GuessType } from '../types';
 import { comparePlayers } from '../utils/gameLogic';
 import { Share2, Check, Trophy, Flame, Calendar } from 'lucide-react';
+import { trackEvent } from '../analytics';
 
 interface StatsModalProps {
   isOpen: boolean;
@@ -87,6 +88,7 @@ export const StatsModal: React.FC<StatsModalProps> = ({
 
     navigator.clipboard.writeText(text).then(() => {
       setCopied(true);
+      trackEvent('Social', 'Share', 'StatsModal');
       setTimeout(() => setCopied(false), 2000);
     });
   };
