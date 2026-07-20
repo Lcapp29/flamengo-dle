@@ -18,4 +18,4 @@
 | 16/07/2026 | Lázaro | Dado equivocado | Posição do jogador estava com informações falhas - Atacante |
 | 16/07/2026 | Matheus | Dado equivocado | Posição do jogador estava com informações falhas - Meio Campo |
 | 16/07/2026 | Rodrigo Muniz | Dado equivocado | Posição do jogador estava com informações falhas - Atacante|
-| 16/07/2026 | Juan | Dado equivocado | Posição do jogador estava com informações falhas - Lateral Esquerdo|
+| 20/07/2026 | Juan | Dado equivocado | Posição do jogador estava com informações falhas - Lateral Esquerdo|

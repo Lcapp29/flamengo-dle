@@ -264,23 +264,49 @@ export default function App() {
 
   const columnsToCheck: (keyof Player)[] = ['posicao', 'anoNascimento', 'anoEstreia', 'localNascimento', 'partidas', 'gols'];
 
-  const unrevealedColumns = useMemo(() => {
-    if (!secretPlayer) return [];
-    return columnsToCheck.filter(col => {
-      // Check if any guess (regular or hint) already revealed this column
-      return !guesses.some(g => {
-        if ('isHint' in g) {
-          return g.column === col;
-        } else {
-          const playerGuess = g as Player;
-          if (col === 'localNascimento') {
-            return getRegion(playerGuess.localNascimento) === getRegion(secretPlayer.localNascimento);
-          }
-          return playerGuess[col] === secretPlayer[col];
+  const discoveredAttributes = useMemo(() => {
+    if (!secretPlayer) return null;
+    const discovered = {
+      foto: false,
+      posicao: false,
+      anoNascimento: false,
+      anoEstreia: false,
+      localNascimento: false,
+      partidas: false,
+      gols: false,
+    };
+
+    guesses.forEach(g => {
+      if ('isHint' in g) {
+        if (g.column in discovered) {
+          discovered[g.column as keyof typeof discovered] = true;
         }
-      });
+      } else {
+        const p = g as Player;
+        if (p.id === secretPlayer.id) discovered.foto = true;
+        if (p.posicao === secretPlayer.posicao) discovered.posicao = true;
+        if (p.anoNascimento === secretPlayer.anoNascimento) discovered.anoNascimento = true;
+        if (p.anoEstreia === secretPlayer.anoEstreia) discovered.anoEstreia = true;
+        if (getRegion(p.localNascimento) === getRegion(secretPlayer.localNascimento)) discovered.localNascimento = true;
+        if (p.partidas === secretPlayer.partidas) discovered.partidas = true;
+        if (p.gols === secretPlayer.gols) discovered.gols = true;
+      }
     });
+
+    return discovered;
   }, [guesses, secretPlayer]);
+
+  const unrevealedColumns = useMemo(() => {
+    if (!secretPlayer || !discoveredAttributes) return [];
+    
+    const unrevealed = columnsToCheck.filter(col => !discoveredAttributes[col]);
+    
+    if (unrevealed.length === 0 && !discoveredAttributes.foto) {
+      unrevealed.push('foto' as any);
+    }
+
+    return unrevealed;
+  }, [discoveredAttributes, secretPlayer]);
 
   const handleUseHint = () => {
     if (availableHints <= 0 || unrevealedColumns.length === 0 || won) return;
@@ -603,6 +629,55 @@ export default function App() {
               <div className="w-[76px] md:w-full md:flex-1 shrink-0">Partidas</div>
               <div className="w-[76px] md:w-full md:flex-1 shrink-0">Gols</div>
             </div>
+
+            {/* Summary Row */}
+            {discoveredAttributes && secretPlayer && (
+              <div className="flex gap-1.5 md:gap-3 w-max md:w-full min-w-full max-w-5xl mx-auto px-1 py-1.5 border-b border-white/5 bg-[#0a0a0a]/50">
+                {/* 1. Jogador (Foto) */}
+                <div className="w-[76px] md:w-full md:flex-1 shrink-0 sticky left-0 z-20 bg-[#050505]/80 backdrop-blur-sm before:absolute before:inset-y-0 before:-right-1.5 md:before:hidden before:w-1.5 before:bg-[#050505]/80 flex items-center justify-center p-0.5 rounded-lg">
+                  {discoveredAttributes.foto ? (
+                    <div className="relative w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-[#eab308] bg-[#1a1a1a]">
+                      <img
+                        src={secretPlayer.foto}
+                        alt="Descoberto"
+                        className="w-full h-full object-cover"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex-1 flex items-center justify-center text-white/20">
+                      <div className="w-6 h-6 md:w-7 md:h-7 rounded-full border border-white/10 bg-white/5 flex items-center justify-center">
+                        <span className="text-[10px] font-bold">?</span>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                {/* 2. Posição */}
+                <div className={`w-[76px] md:w-full md:flex-1 shrink-0 flex items-center justify-center p-1 rounded-lg border text-center ${discoveredAttributes.posicao ? 'bg-[#22c55e]/10 border-[#22c55e]/30' : 'bg-transparent border-dashed border-white/10'}`}>
+                  {discoveredAttributes.posicao ? <span className="text-[9px] md:text-xs font-bold text-[#22c55e] uppercase">{secretPlayer.posicao}</span> : <span className="text-white/20 font-bold">-</span>}
+                </div>
+                {/* 3. Ano Nascimento */}
+                <div className={`w-[76px] md:w-full md:flex-1 shrink-0 flex items-center justify-center p-1 rounded-lg border text-center ${discoveredAttributes.anoNascimento ? 'bg-[#22c55e]/10 border-[#22c55e]/30' : 'bg-transparent border-dashed border-white/10'}`}>
+                  {discoveredAttributes.anoNascimento ? <span className="text-[9px] md:text-xs font-bold text-[#22c55e]">{secretPlayer.anoNascimento}</span> : <span className="text-white/20 font-bold">-</span>}
+                </div>
+                {/* 4. Ano Estreia */}
+                <div className={`w-[76px] md:w-full md:flex-1 shrink-0 flex items-center justify-center p-1 rounded-lg border text-center ${discoveredAttributes.anoEstreia ? 'bg-[#22c55e]/10 border-[#22c55e]/30' : 'bg-transparent border-dashed border-white/10'}`}>
+                  {discoveredAttributes.anoEstreia ? <span className="text-[9px] md:text-xs font-bold text-[#22c55e]">{secretPlayer.anoEstreia}</span> : <span className="text-white/20 font-bold">-</span>}
+                </div>
+                {/* 5. Região */}
+                <div className={`w-[76px] md:w-full md:flex-1 shrink-0 flex items-center justify-center p-1 rounded-lg border text-center ${discoveredAttributes.localNascimento ? 'bg-[#22c55e]/10 border-[#22c55e]/30' : 'bg-transparent border-dashed border-white/10'}`}>
+                  {discoveredAttributes.localNascimento ? <span className="text-[9px] md:text-xs font-bold text-[#22c55e] uppercase break-words px-0.5 leading-tight">{getRegion(secretPlayer.localNascimento)}</span> : <span className="text-white/20 font-bold">-</span>}
+                </div>
+                {/* 6. Partidas */}
+                <div className={`w-[76px] md:w-full md:flex-1 shrink-0 flex items-center justify-center p-1 rounded-lg border text-center ${discoveredAttributes.partidas ? 'bg-[#22c55e]/10 border-[#22c55e]/30' : 'bg-transparent border-dashed border-white/10'}`}>
+                  {discoveredAttributes.partidas ? <span className="text-[9px] md:text-xs font-bold text-[#22c55e]">{secretPlayer.partidas}</span> : <span className="text-white/20 font-bold">-</span>}
+                </div>
+                {/* 7. Gols */}
+                <div className={`w-[76px] md:w-full md:flex-1 shrink-0 flex items-center justify-center p-1 rounded-lg border text-center ${discoveredAttributes.gols ? 'bg-[#22c55e]/10 border-[#22c55e]/30' : 'bg-transparent border-dashed border-white/10'}`}>
+                  {discoveredAttributes.gols ? <span className="text-[9px] md:text-xs font-bold text-[#22c55e]">{secretPlayer.gols}</span> : <span className="text-white/20 font-bold">-</span>}
+                </div>
+              </div>
+            )}
 
             {/* Guess Rows (Reversed to show newest guess on top) */}
             <div className="flex flex-col">
