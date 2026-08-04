@@ -57,11 +57,15 @@ export default function App() {
 
   // Clear old cache for V3
   useEffect(() => {
-    const currentVersion = 'v3';
-    const storedVersion = localStorage.getItem('flamengodle_version');
-    if (storedVersion !== currentVersion) {
-      localStorage.clear();
-      localStorage.setItem('flamengodle_version', currentVersion);
+    try {
+      const currentVersion = 'v3';
+      const storedVersion = localStorage.getItem('flamengodle_version');
+      if (storedVersion !== currentVersion) {
+        localStorage.clear();
+        localStorage.setItem('flamengodle_version', currentVersion);
+      }
+    } catch (e) {
+      console.warn('LocalStorage init error', e);
     }
   }, []);
 
@@ -160,28 +164,32 @@ export default function App() {
         setSecretPlayer(secret);
 
         // Load that day's progress from LocalStorage
-        const savedState = localStorage.getItem(keys.stateKey);
-        if (savedState) {
-          const parsedState: GameState = JSON.parse(savedState);
-          // Restore guesses objects from IDs
-          const restoredGuesses = parsedState.guesses
-            .map((id) => {
-              if (id.startsWith('hint:')) {
-                const column = id.split('hint:')[1] as keyof Player;
-                return { isHint: true as const, column };
-              }
-              return fullData.find((p) => p.id === id);
-            })
-            .filter((g): g is GuessType => !!g);
+        try {
+          const savedState = localStorage.getItem(keys.stateKey);
+          if (savedState) {
+            const parsedState: GameState = JSON.parse(savedState);
+            // Restore guesses objects from IDs
+            const restoredGuesses = parsedState.guesses
+              .map((id) => {
+                if (id.startsWith('hint:')) {
+                  const column = id.split('hint:')[1] as keyof Player;
+                  return { isHint: true as const, column };
+                }
+                return fullData.find((p) => p.id === id);
+              })
+              .filter((g): g is GuessType => !!g);
 
-          setGuesses(restoredGuesses);
-          setWon(parsedState.won);
-          if (parsedState.won) {
-            // Delay showing the stats modal slightly so the user sees the table first
-            setTimeout(() => {
-              setShowStatsModal(true);
-            }, 800);
+            setGuesses(restoredGuesses);
+            setWon(parsedState.won);
+            if (parsedState.won) {
+              // Delay showing the stats modal slightly so the user sees the table first
+              setTimeout(() => {
+                setShowStatsModal(true);
+              }, 800);
+            }
           }
+        } catch (e) {
+          console.warn('LocalStorage state error', e);
         }
       })
       .catch((err) => {
@@ -189,9 +197,13 @@ export default function App() {
       });
 
     // Load overall statistics
-    const savedStats = localStorage.getItem(keys.statsKey);
-    if (savedStats) {
-      setStats(JSON.parse(savedStats));
+    try {
+      const savedStats = localStorage.getItem(keys.statsKey);
+      if (savedStats) {
+        setStats(JSON.parse(savedStats));
+      }
+    } catch (e) {
+      console.warn('LocalStorage stats error', e);
     }
   }, [keys, gameDateStr]);
 
@@ -232,12 +244,16 @@ export default function App() {
     setGuesses(newGuesses);
 
     // Save state to the selected date's localStorage
-    const newState: GameState = {
-      date: gameDateStr,
-      guesses: newGuesses.map((g) => ('isHint' in g ? `hint:${g.column}` : g.id)),
-      won: isCorrect,
-    };
-    localStorage.setItem(keys.stateKey, JSON.stringify(newState));
+    try {
+      const newState: GameState = {
+        date: gameDateStr,
+        guesses: newGuesses.map((g) => ('isHint' in g ? `hint:${g.column}` : g.id)),
+        won: isCorrect,
+      };
+      localStorage.setItem(keys.stateKey, JSON.stringify(newState));
+    } catch (e) {
+      console.warn('LocalStorage save error', e);
+    }
 
     if (isCorrect) {
       setWon(true);
@@ -320,19 +336,28 @@ export default function App() {
     setGuesses(newGuesses);
 
     // Save state to the selected date's localStorage
-    const newState: GameState = {
-      date: gameDateStr,
-      guesses: newGuesses.map((g) => ('isHint' in g ? `hint:${g.column}` : g.id)),
-      won: won,
-    };
-    localStorage.setItem(keys.stateKey, JSON.stringify(newState));
+    try {
+      const newState: GameState = {
+        date: gameDateStr,
+        guesses: newGuesses.map((g) => ('isHint' in g ? `hint:${g.column}` : g.id)),
+        won: won,
+      };
+      localStorage.setItem(keys.stateKey, JSON.stringify(newState));
+    } catch (e) {
+      console.warn('LocalStorage save error', e);
+    }
   };
 
   const updateStatsOnWin = (): Stats => {
-    const savedStats = localStorage.getItem(keys.statsKey);
-    const currentStats: Stats = savedStats
-      ? JSON.parse(savedStats)
-      : { gamesPlayed: 0, gamesWon: 0, currentStreak: 0, maxStreak: 0 };
+    let currentStats: Stats = { gamesPlayed: 0, gamesWon: 0, currentStreak: 0, maxStreak: 0 };
+    try {
+      const savedStats = localStorage.getItem(keys.statsKey);
+      if (savedStats) {
+        currentStats = JSON.parse(savedStats);
+      }
+    } catch (e) {
+      console.warn('LocalStorage stats read error', e);
+    }
 
     if (currentStats.lastWonDate === gameDateStr) {
       return currentStats; // Already recorded today
@@ -368,7 +393,11 @@ export default function App() {
       lastWonDate: gameDateStr,
     };
 
-    localStorage.setItem(keys.statsKey, JSON.stringify(updated));
+    try {
+      localStorage.setItem(keys.statsKey, JSON.stringify(updated));
+    } catch (e) {
+      console.warn('LocalStorage stats save error', e);
+    }
     return updated;
   };
 
@@ -404,12 +433,18 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#f3f4f6] flex flex-col relative overflow-hidden">
-      {/* Decorative subtle ambient glows */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#d30000]/5 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-[#d30000]/3 rounded-full blur-[120px] pointer-events-none" />
+      {/* Decorative subtle ambient glows (Optimized for Safari/iOS using radial-gradient instead of CSS blur) */}
+      <div 
+        className="absolute top-0 left-1/4 w-[500px] h-[500px] pointer-events-none transform-gpu"
+        style={{ background: 'radial-gradient(circle, rgba(211,0,0,0.05) 0%, transparent 70%)' }}
+      />
+      <div 
+        className="absolute bottom-10 right-1/4 w-[400px] h-[400px] pointer-events-none transform-gpu"
+        style={{ background: 'radial-gradient(circle, rgba(211,0,0,0.03) 0%, transparent 70%)' }}
+      />
 
       {/* Navigation Header */}
-      <header className="flex items-center justify-between px-6 md:px-10 py-5 border-b border-white/10 bg-[#0a0a0a]/90 backdrop-blur-md sticky top-0 z-40">
+      <header className="flex items-center justify-between px-6 md:px-10 py-5 border-b border-white/10 bg-[#0a0a0a]/90 backdrop-blur-md sticky top-0 z-40 transform-gpu">
         <div className="flex items-center gap-4">
           <img src="./assets/logo.png" alt="Logo Flamengodle" className="h-10 w-auto object-contain" />
           <div>
