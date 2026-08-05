@@ -98,3 +98,15 @@
         "gols": 9,
         "foto": "./imagens_jogadores/wallace_yan.jpg"
     },
+| 05/08/2026 | Eduardo da Silva | Dado equivocado | Posição do jogador estava com informações falhas - Atacante |
+    {
+        "id": "eduardo-da-silva",
+        "nome": "Eduardo da Silva",
+        "posicao": "Atacante",
+        "anoNascimento": 1983,
+        "localNascimento": "Rio de Janeiro/RJ",
+        "anoEstreia": 2014,
+        "partidas": 49,
+        "gols": 14,
+        "foto": "./imagens_jogadores/eduardo-da-silva.jpg"
+    },
