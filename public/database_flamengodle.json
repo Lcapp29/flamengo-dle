@@ -1188,17 +1188,6 @@
         "foto": "./imagens_jogadores/geuvanio.jpg"
     },
     {
-        "id": "gomes",
-        "nome": "Gomes",
-        "posicao": "Meio Campo",
-        "anoNascimento": 2001,
-        "localNascimento": "Rio de Janeiro/RJ",
-        "anoEstreia": 2020,
-        "partidas": 122,
-        "gols": 4,
-        "foto": "./imagens_jogadores/gomes.jpg"
-    },
-    {
         "id": "gonzalo_plata_1",
         "nome": "Gonzalo Plata",
         "posicao": "Atacante",

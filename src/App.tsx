@@ -58,7 +58,7 @@ export default function App() {
   // Clear old cache for V3
   useEffect(() => {
     try {
-      const currentVersion = 'v3';
+      const currentVersion = 'v4';
       const storedVersion = localStorage.getItem('flamengodle_version');
       if (storedVersion !== currentVersion) {
         localStorage.clear();
@@ -791,7 +791,7 @@ export default function App() {
               <div className="bg-[#d30000]/10 border border-[#d30000]/30 rounded-lg p-3 text-zinc-300 text-xs flex gap-2">
                 <AlertCircle className="w-5 h-5 text-[#d30000] shrink-0 mt-0.5" />
                 <span>
-                  <strong>Atenção:</strong> A nossa base de dados é restrita a jogadores que estrearam no Flamengo a partir do ano 2000 (neste século) e que tenham completado mais de 10 partidas oficiais pelo clube.
+                  <strong>Atenção:</strong> A nossa base de dados é restrita a jogadores que estrearam no Flamengo a partir do ano 2000 (neste século) e que tenham completado mais de 20 partidas oficiais pelo clube.
                 </span>
               </div>
 
