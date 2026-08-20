@@ -110,3 +110,5 @@
         "gols": 14,
         "foto": "./imagens_jogadores/eduardo-da-silva.jpg"
     },
+| 19/08/2026 | Gomes | Exclusão | Jogador duplicado e excluído (João Gomes) |
+| 20/08/2026 | Evertton Araujo | Dado equivocado | Ausência de local de nascimento |
