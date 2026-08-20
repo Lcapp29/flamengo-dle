@@ -112,3 +112,26 @@
     },
 | 19/08/2026 | Gomes | Exclusão | Jogador duplicado e excluído (João Gomes) |
 | 20/08/2026 | Evertton Araujo | Dado equivocado | Ausência de local de nascimento |
+    {
+        "id": "evertton_araujo",
+        "nome": "Evertton Araújo",
+        "posicao": "Meio Campo",
+        "anoNascimento": 2003,
+        "localNascimento": "Volta Redonda/RJ",
+        "anoEstreia": 2023,
+        "partidas": 95,
+        "gols": 3,
+        "foto": "./imagens_jogadores/evertton_araujo.jpg"
+    }
+| 20/08/2026 | Matheus Gonçalves | Dado equivocado | Ausência de local de nascimento |
+    { 
+        "id": "matheus_goncalves",
+        "nome": "Matheus Gonçalves",
+        "posicao": "Atacante",
+        "anoNascimento": 2005,
+        "localNascimento": "Rio de Janeiro/RJ",
+        "anoEstreia": 2022,
+        "partidas": 57,
+        "gols": 6,
+        "foto": "./imagens_jogadores/matheus_goncalves.jpg"
+    },
